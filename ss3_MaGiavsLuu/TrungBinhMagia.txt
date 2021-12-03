@@ -1,0 +1,5 @@
+Begin
+  Nhập vào điểm 3 môn Toán Lý Hóa
+  Arg = ( Toán + Lý + Hóa ) /3
+  Display Arg
+End

@@ -1,0 +1,5 @@
+Begin
+  Nhập số tiền Đô la Mỹ T
+  vnd = T * 23000
+  Display vnd
+End

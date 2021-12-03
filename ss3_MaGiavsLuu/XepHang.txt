@@ -1,0 +1,23 @@
+Begin
+ 
+   Nhập nào điểm sinh viên  X ( 0<= X <= 100
+   
+   IF X >= 75
+       DISPLAY "LOAI A"
+   ELSE 
+     IF  X >= 60 
+       DISPLAY "LOAI B"
+     END IF
+   ELSE
+     IF X >= 45
+       DISPLAY "LOAI C"
+     END IF 
+   ELSE
+     IF X >= 35 
+         DISPLAY "LOAI d"
+     END IF
+   ELSE 
+      DISPLAY "LOAI E"
+   END IF
+
+End

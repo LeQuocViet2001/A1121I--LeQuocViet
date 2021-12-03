@@ -1,0 +1,11 @@
+Begin
+  Nhập vào 3 sô a b c
+  Max =a 
+  IF  ( b > Max )
+      Max = b
+  END IF
+  IF (C > Max )
+      Max = c
+  END IF
+  Display Max
+End

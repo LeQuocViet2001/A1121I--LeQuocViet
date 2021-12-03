@@ -1,0 +1,15 @@
+Begin
+   Nhập vào n
+   Nhập vào dãy a1, a2, a3, a4... an
+   Max = a1
+   i = 2;
+   WHILE ( i <  n ) 
+   DO
+      IF ai > Max
+         Max =ai
+      END IF
+   END
+   DISPLAY Max
+END   
+
+  
