@@ -20,16 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04659c1b-8666-401e-a8f9-e8326b1c3340" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/BaiTap/CoVua.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/BaiTap/FormDangKy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/BaiTap/FormSoThich.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/BaiTap/FormSurvey.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/BaiTap/ThoiKhoaBieu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TableCoBan/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TableNangCao/tablenangcao.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TimKiemGoogle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/simpleform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss6_Javascrip/NhungJs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss6_Javascrip/Output.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss6_Javascrip/THNhung.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TableCoBan/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TableCoBan/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +37,8 @@
         <option value="XHTML File" />
         <option value="HTML4 File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,6 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,8 +69,14 @@
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss5_FormVsTable\ThucHanh\TableCoBan" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.CoVua.html">
+  <component name="RunManager" selected="JavaScript Debug.NhungJs.html">
     <configuration name="CoVua.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/BaiTap/CoVua.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="NhungJs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss6_Javascrip/NhungJs.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Output.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss6_Javascrip/Output.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="ThoiKhoaBieu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/BaiTap/ThoiKhoaBieu.html" useBuiltInWebServerPort="true">
@@ -81,19 +85,13 @@
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/ThucHanh/TableCoBan/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="tablenangcao.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/ThucHanh/TableNangCao/tablenangcao.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="tablesimple.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/ThucHanh/TableCoBan/tablesimple.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.NhungJs.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.Output.html" />
         <item itemvalue="JavaScript Debug.CoVua.html" />
         <item itemvalue="JavaScript Debug.ThoiKhoaBieu.html" />
-        <item itemvalue="JavaScript Debug.tablenangcao.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.tablesimple.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +111,7 @@
       <workItem from="1638359045407" duration="595000" />
       <workItem from="1639326396327" duration="3415000" />
       <workItem from="1639370125809" duration="13288000" />
+      <workItem from="1639393293700" duration="1964000" />
     </task>
     <servers />
   </component>
