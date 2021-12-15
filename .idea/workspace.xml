@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04659c1b-8666-401e-a8f9-e8326b1c3340" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/ss6_Javascrip/NhungJs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss6_Javascrip/Output.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss6_Javascrip/THNhung.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss7_BienKieuDuLieu/BaiTap/Caculator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss7_BienKieuDuLieu/BaiTap/ChuyenDoiTien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss7_BienKieuDuLieu/BaiTap/bien_KieuDulieu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss7_BienKieuDuLieu/BaiTap/chuyenDoiTien.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TableCoBan/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss5_FormVsTable/ThucHanh/TableCoBan/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +36,9 @@
       <list>
         <option value="XHTML File" />
         <option value="HTML4 File" />
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -69,17 +69,17 @@
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss5_FormVsTable\ThucHanh\TableCoBan" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.NhungJs.html">
-    <configuration name="CoVua.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/BaiTap/CoVua.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.bien_KieuDulieu.html">
+    <configuration name="Caculator.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss7_BienKieuDuLieu/BaiTap/Caculator.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="ChuyenDoiTien.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss7_BienKieuDuLieu/BaiTap/ChuyenDoiTien.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="NhungJs.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss6_Javascrip/NhungJs.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Output.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss6_Javascrip/Output.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="ThoiKhoaBieu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/BaiTap/ThoiKhoaBieu.html" useBuiltInWebServerPort="true">
+    <configuration name="bien_KieuDulieu.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss7_BienKieuDuLieu/BaiTap/bien_KieuDulieu.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss5_FormVsTable/ThucHanh/TableCoBan/index.html" useBuiltInWebServerPort="true">
@@ -87,11 +87,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.bien_KieuDulieu.html" />
+        <item itemvalue="JavaScript Debug.ChuyenDoiTien.html" />
+        <item itemvalue="JavaScript Debug.Caculator.html" />
         <item itemvalue="JavaScript Debug.NhungJs.html" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.Output.html" />
-        <item itemvalue="JavaScript Debug.CoVua.html" />
-        <item itemvalue="JavaScript Debug.ThoiKhoaBieu.html" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +111,8 @@
       <workItem from="1638359045407" duration="595000" />
       <workItem from="1639326396327" duration="3415000" />
       <workItem from="1639370125809" duration="13288000" />
-      <workItem from="1639393293700" duration="1964000" />
+      <workItem from="1639393293700" duration="2567000" />
+      <workItem from="1639565832176" duration="4064000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator</title>
+</head>
+<body>
+
+<input type="text" id="num1">
+<input type="text" id="num2">
+
+<br>
+
+<button onclick="addition()">Add</button>
+<button onclick="tru()">Sub</button>
+<button onclick="nhan()">Mul</button>
+<button onclick="chia()">Div</button>
+<p id="result"></p>
+
+<script>
+
+    function  addition() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let rs = num1 + num2;
+        document.getElementById("result").innerText = rs
+    }
+    function  tru() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let rs = num1 - num2;
+        document.getElementById("result").innerText = rs
+    }
+
+    function  nhan() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let rs = num1 * num2;
+        document.getElementById("result").innerText = rs
+    }
+
+    function  chia() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let rs = num1 / num2;
+        document.getElementById("result").innerText = rs
+    }
+
+
+
+</script>
+
+</body>
+</html>
