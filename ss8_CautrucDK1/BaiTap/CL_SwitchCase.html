@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So ngay</title>
+</head>
+<body>
+
+<input id ="t" type="number" >
+<button type="button" onclick="f()">Tinh so ngay</button>
+<p id="rsa" style="color: #d61b06"></p>
+
+<script>
+
+    function f() {
+        let a = parseInt( document.getElementById("t").value );
+
+        switch (a) {
+
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+            {   rs = "Thang " + a + " co 31 ngay" ;
+                break;
+            }
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+            {   rs = "Thang " + a + " co 30 ngay" ;
+                break;
+            }
+            case 2:
+            {   rs = "Thang " + a + " co 29 ngay" ;
+                break;
+            }
+
+        }
+
+
+        document.getElementById("rsa").innerText = rs.toString()
+
+    }
+
+</script>
+</body>
+</html>

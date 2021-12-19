@@ -23,4 +23,8 @@ function getrs(){
 
     document.getElementById("rs").innerText = s;
 
+
+    /*
+
+     */
 }

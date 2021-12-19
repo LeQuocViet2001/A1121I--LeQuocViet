@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Chi so co the</h2>
+
+<label>Nhap cang nang: </label> <input id="w" type="number"> <br>
+<label>Nhap chieu cao: </label> <input id ="h" type="number"> <br>
+<button id="bt"  onclick="rs()">OK</button>
+
+<script>
+    function  rs() {
+
+        let w = document.getElementById("w").value;
+        let h = document.getElementById("h").value;
+
+        let bmi = w / ( h^2)
+        if (bmi < 18)
+            document.write("Underweight");
+        else if (bmi < 25.0)
+            document.write("Normal");
+        else if (bmi < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
