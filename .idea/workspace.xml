@@ -20,12 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04659c1b-8666-401e-a8f9-e8326b1c3340" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/ThucHanh/Ban_Phim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/ThucHanh/Su_Kien_Chuot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/DoWhile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/LongNhau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/SudungWhile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/SudungvonglapFor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_CauTrucLap2/BaiTap/NguyenToDauTien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_CauTrucLap2/BaiTap/luyentap!.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/DoYouLoveme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/YesNo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_CautrucDK1/BaiTap/CL_SwitchCase.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/CL_SwitchCase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_CautrucDK1/BaiTap/MayTinh_DonGian.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/MayTinh_DonGian.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_CautrucDK1/BaiTap/Tinh_Can_Nang.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/Tinh_Can_Nang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,40 +69,40 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss9_CauTrucDk_2\ThucHanh" />
+      <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss8_CautrucDK1\ThucHanh" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss9_CauTrucDk_2\BaiTap" />
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss8_CautrucDK1\ThucHanh" />
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss5_FormVsTable\ThucHanh" />
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss5_FormVsTable\ThucHanh\TableCoBan" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss9_CauTrucDk_2\ThucHanh" />
-      <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss8_CautrucDK1\ThucHanh" />
-    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.MayTinh_DonGian.html">
-    <configuration name="Ban_Phim.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss8_CautrucDK1/ThucHanh/Ban_Phim.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.luyentap!.html">
+    <configuration name="DoWhile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss10_cautruclap/thuchanh/DoWhile.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="CL_SwitchCase.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss9_CauTrucDk_2/BaiTap/CL_SwitchCase.html" useBuiltInWebServerPort="true">
+    <configuration name="LongNhau.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss10_cautruclap/thuchanh/LongNhau.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="MayTinh_DonGian.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss9_CauTrucDk_2/BaiTap/MayTinh_DonGian.html" useBuiltInWebServerPort="true">
+    <configuration name="NguyenToDauTien.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss11_CauTrucLap2/BaiTap/NguyenToDauTien.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Su_Kien_Chuot.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss8_CautrucDK1/ThucHanh/Su_Kien_Chuot.html" useBuiltInWebServerPort="true">
+    <configuration name="SudungWhile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss10_cautruclap/thuchanh/SudungWhile.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Tinh_Can_Nang.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss9_CauTrucDk_2/BaiTap/Tinh_Can_Nang.html" useBuiltInWebServerPort="true">
+    <configuration name="luyentap!.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss11_CauTrucLap2/BaiTap/luyentap!.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.MayTinh_DonGian.html" />
-        <item itemvalue="JavaScript Debug.CL_SwitchCase.html" />
-        <item itemvalue="JavaScript Debug.Tinh_Can_Nang.html" />
-        <item itemvalue="JavaScript Debug.Ban_Phim.html" />
-        <item itemvalue="JavaScript Debug.Su_Kien_Chuot.html" />
+        <item itemvalue="JavaScript Debug.luyentap!.html" />
+        <item itemvalue="JavaScript Debug.NguyenToDauTien.html" />
+        <item itemvalue="JavaScript Debug.LongNhau.html" />
+        <item itemvalue="JavaScript Debug.DoWhile.html" />
+        <item itemvalue="JavaScript Debug.SudungWhile.html" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +127,8 @@
       <workItem from="1639660322153" duration="779000" />
       <workItem from="1639895056886" duration="6195000" />
       <workItem from="1639995761406" duration="1391000" />
+      <workItem from="1640075227363" duration="2474000" />
+      <workItem from="1640343592130" duration="4078000" />
     </task>
     <servers />
   </component>
