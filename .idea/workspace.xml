@@ -20,15 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04659c1b-8666-401e-a8f9-e8326b1c3340" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/DoWhile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/LongNhau.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/SudungWhile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss10_cautruclap/thuchanh/SudungvonglapFor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss11_CauTrucLap2/BaiTap/NguyenToDauTien.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss11_CauTrucLap2/BaiTap/luyentap!.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/DoYouLoveme.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss9_CauTrucDk_2/BaiTap/YesNo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_CauTrucLap2/BaiTap/luyentap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss11_CauTrucLap2/BaiTap/luyentap!.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,7 @@
       <recent name="C:\Users\ASUS\Desktop\CodeGym\Module01\ss5_FormVsTable\ThucHanh\TableCoBan" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.luyentap!.html">
+  <component name="RunManager" selected="JavaScript Debug.luyentap.html">
     <configuration name="DoWhile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss10_cautruclap/thuchanh/DoWhile.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -93,12 +87,12 @@
     <configuration name="SudungWhile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss10_cautruclap/thuchanh/SudungWhile.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="luyentap!.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss11_CauTrucLap2/BaiTap/luyentap!.html" useBuiltInWebServerPort="true">
+    <configuration name="luyentap.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Module01/ss11_CauTrucLap2/BaiTap/luyentap.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.luyentap!.html" />
+        <item itemvalue="JavaScript Debug.luyentap.html" />
         <item itemvalue="JavaScript Debug.NguyenToDauTien.html" />
         <item itemvalue="JavaScript Debug.LongNhau.html" />
         <item itemvalue="JavaScript Debug.DoWhile.html" />
@@ -129,6 +123,7 @@
       <workItem from="1639995761406" duration="1391000" />
       <workItem from="1640075227363" duration="2474000" />
       <workItem from="1640343592130" duration="4078000" />
+      <workItem from="1640347759668" duration="3336000" />
     </task>
     <servers />
   </component>

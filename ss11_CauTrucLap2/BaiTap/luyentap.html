@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bai 1</h1>
+
+
+
+<script>
+
+        for( i = 1 ;i <100 ; i++)
+        {
+            document.write(i + "\n" )
+            if ( i == 99) document.write("da hoan thanh");
+        }
+        document.write("<h2>Bai 2</h2>");
+        let nt=  parseInt(prompt("Nhiet do hien tai = "));
+        if ( nt < 20) alert("Tang nhiet do");
+        else if ( nt >100 ) alert("giam nhiet do");
+
+
+        let  n1=0, n2=1 , ni;
+        ni = n1 + n2;
+        let s = "20 so:" + n1 + ", " + n2;
+        let count = 2, S = 0 + 1;
+        dt5 = 0; // so fio % 5 dau tien
+        while ( count < 20){
+            s= s+ ", " + ni;
+            n1 = n2;
+            n2= ni;
+            ni = n1 + n2
+            S =S + ni;
+            if( ni % 5==0 && dt5 == 0){
+                document.write("<h2>Bai 4</h2> <br>");
+                document.write("So dau tien % 5 la:" + ni);
+                dt5++;
+            }
+            count++
+        }
+        document.write("<h2>Bai 3</h2> <br>");
+        document.write("20 so fibo dau tien" + s)
+        document.write("<h2>Bai 5</h2> <br>");
+        document.write("Tong 20 so fibo dau tien " + S)
+
+
+        /// bia 6 ne
+        let i7 = 0;
+        let S7 = 0, count7 = 0;
+        while ( count7  <=5){
+
+            if(i7%7==0){
+                S7 =S7 + i7 ;
+                count7++;
+            }
+
+            i7++;
+        }
+        document.write("<h2>Bai 6</h2> <br>");
+        document.write("Tong 30 so dau tien" + S7);
+        s = ''
+
+        document.write("<h2>Bai 7 </h2> <br>");
+        for(  c = 0 ; c< 100 ;c++){
+
+            if( c % 3 ==0 && c % 5 != 0)
+                 document.write( "FIZZ  <br>"  );
+            else if ( c % 3 != 0 && c % 5 ==0)
+                document.write( "BUZZ<br>"  );
+            else if (  c % 3 == 0 && c %5 ==0)
+                document.write("FIZZ BUZZ<br>"  );
+            else document.write(c + "<br>");
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
