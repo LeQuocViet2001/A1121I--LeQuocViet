@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    ////
+    let  myColor = ["Red", "Green", "White", "Black"];
+    document.write( "Bai 1 " +   myColor.join(", ") )
+
+    ////Bai 2
+    const num=window.prompt();
+    const str = num.toString();
+    const result = [str[0]];
+
+    for(let x=1; x<str.length; x++)
+    {
+        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+            result.push('-', str[x]);
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write( "  <br> Bai 2 " + result.join('-')  )
+
+
+</script>
+</body>
+</html>

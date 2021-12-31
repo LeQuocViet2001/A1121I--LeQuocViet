@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dao nguoc</title>
+</head>
+<body>
+
+
+<script>
+    let x = [-3, 5, 1, 3, 2, 10];
+
+
+    ///////////
+    //    document.write(  x.reverse() )   ////
+    /////////////
+    let f = 0;
+    let l = x.length - 1;
+    while ( f < l){
+        let b = x[f]
+        x[f] = x [l]
+        x[l] = b
+        f++
+        l--
+    }
+    document.write(x);
+
+
+
+</script>
+</body>
+</html>
