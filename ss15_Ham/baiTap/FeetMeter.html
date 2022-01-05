@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h4> Do F M </h4>
+<input type="number" id="ip"  >
+<select id="from" onchange="chuyen()" on>
+    <option value="1"> FEET</option>
+    <option value="2"> METER </option>
+
+</select>
+<input type="button" value="=" onclick="chuyen()">
+
+<p id="rs"></p>
+<script>
+
+
+    function feetToMeter(feet){
+        return  0.305 * feet;
+    }
+    function meterToFeet(meter){
+        return 3.279 * meter
+    }
+
+    function chuyen() {
+        let id = document.getElementById("from").value
+        let vl = document.getElementById("ip").value
+        let rs = 0
+
+        if ( id == 1)
+
+             document.getElementById("rs").innerText=  feetToMeter( vl ) + "m";
+
+        else
+            document.getElementById("rs").innerText=  meterToFeet( vl ) + "feet";
+            }
+
+
+
+
+
+</script>
+</body>
+</html>

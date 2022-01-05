@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <p>
+        <h1>Chuyen doi nhiet do </h1>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="0000"
+               oninput="temperatureConverter(this.value)"
+               onchange="temperatureConverter(this.value)">
+                          ///placehoder -- ẩn mặc định
+    </p>
+    <p>Celsius: <span id="outputCelsius"></span></p>
+</form>
+
+<script>
+
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+    }
+
+</script>
+</body>
+</html>

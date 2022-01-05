@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let arr =  [ "Polaris"," Aldebaran",'Deneb','Vega', 'Altair','Dubhe','Regulus']
+    let arr2 = [ "Ursa Minor", 'Tarurus','Cygnus', 'Lyra','Aquila', ' Ursa Major' , 'Leo']
+
+    function b5( name){
+
+        let i = arr.indexOf(name)
+        if( i == -1) return "Khong tim thay chom sau"
+        else return  name  +" thuoc chom sao " + arr2[i]
+    }
+
+    let vl = prompt(" Nhap ten ngoi sao: ")
+    alert( b5(vl) )
+
+</script>
+</body>
+</html>
