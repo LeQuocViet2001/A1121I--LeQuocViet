@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class HinhChuNhat{
+
+        constructor(dai, rong) {
+
+            this.dai = dai;
+            this.rong =rong;
+
+        }
+
+        getS(){
+            return this.dai * this.rong
+        }
+
+        getC(){
+            return ( this.rong + this.dai)*2
+        }
+
+        setDai(a)
+        {
+            this.dai =a;
+        }
+
+        setRong(b)
+        {
+            this.rong = b;
+        }
+          ///// canvas ???
+    }
+
+    let a = new HinhChuNhat(50,30);
+
+    alert("Dien Tinh S ="+ a.getC()+ " Chu vi C=" +a.getC()  )
+
+    a.setDai(10)
+    a.setRong(20)
+
+
+
+</script>
+</body>
+</html>

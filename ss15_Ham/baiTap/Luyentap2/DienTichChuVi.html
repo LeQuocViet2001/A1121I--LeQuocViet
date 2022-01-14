@@ -7,13 +7,20 @@
 <body>
 <script>
 
-    function  SC( r ) {
-        return 2*3.14
+    function  S( r ) {
+        return  r*3.14*3.14
+
+    }
+    function C(r){
+        return 2*3.14*r
 
     }
 
-    let p = parseFloat( prompt("Nhao 1 so n = "))
-    alert("Binh phuong cua " + p + "= " + bp(p) )
+
+
+
+    let p = parseFloat( prompt("Nhao ban kinh r = "))
+    alert( "Chu vi la C= " + C(p) + "Dien tich S= " + + S(p))
 
 </script>
 </body>

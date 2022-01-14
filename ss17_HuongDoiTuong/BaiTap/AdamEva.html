@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class Apple{
+        constructor() {
+            this.weight = 10
+        }
+        setWeight( w ){
+            this.weight = w;
+        }
+
+        decrease(){
+            this.weight = this.weight - 1;
+        }
+
+        isEmpty(){
+            return (this.weight == 0)?true:false
+        }
+
+        getWeight()
+        { return this.weight}
+
+    }
+    class Human{
+        constructor(name, gender, weight, say , apple) {
+            this.name= name;
+            this.gender = gender;
+            this.weihht = weight;
+            this.say = say;
+            this.Apple = apple;
+
+        }
+ /*       setApple( apple){
+            this.Apple = apple
+        }*/
+
+        setWeight(w){
+            this.weihht =w;
+        }
+        getWeight(w){
+            return  this.weihht
+        }
+        setName( n ){
+            this.name = n;
+        }
+
+        isMale(){
+            return (this.gender)?true:false
+        }
+        getSay(){
+            console.log(  this.say )
+        }
+
+        checkApple()
+        {
+            return ( this.Apple.getWeight() >0)?true:false;
+        }
+
+        eat(){
+
+            if( this.checkApple() == true){
+
+                this.weihht ++;
+                this.Apple.decrease();
+
+            }
+            else alert("Het roi")
+        }
+
+
+
+    }
+  let apple = new Apple();
+    apple.setWeight(40)
+    alert( apple.getWeight())
+
+    let adam = new Human("Adam",true, 50,"Don Ong", apple)
+    let eva = new Human("Eva", false, 30, "Nu", apple)
+
+
+    while ( apple.isEmpty() == false )  // khi tao khong phai empty
+    {
+         adam.eat()
+         eva.eat()
+
+    }
+
+    alert(  "Tao = " + apple.getWeight() + "Adam =" + adam.getWeight() + " /n Eva =" + eva.getWeight() )
+
+</script>
+</body>
+</html>

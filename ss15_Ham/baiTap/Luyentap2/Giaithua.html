@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function gt( n ) {
+        let S = n ;
+        for ( let i = n - 1 ; i>1 ; i--){
+            S = S * i
+        }
+        return S;
+
+    }
+    let v  =  parseInt(  prompt("Nhan so nguyen n= "))
+    alert(" Giai thua: " + v + "! =" +  gt(v))
+
+</script>
+</body>
+
+</html>
