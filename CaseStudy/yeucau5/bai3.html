@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let m = parseInt(prompt("Nhap m= "))
+    let n = parseInt(prompt("Nhap n= "))
+
+    let arr = new Array()
+    let s = 0
+
+
+    for ( let i =0 ;i <m ; i++)
+    {
+        arr[i] = new Array()
+        for( let j= 0; j< n ; j++) {
+            {
+                let a = parseInt(prompt("" +
+                    "Nhap gia tri Arr[" + i + "]" +
+                    "[" + j + "]= "))
+
+                arr[i][j] = a;
+            }
+        }
+    }
+
+
+    let rs = max(arr,m,n)
+    alert( "Mang A = \n" + arr + "\n Max= " +rs[0] + "  Min =" + rs[1] )
+
+
+    function max( arr, m ,n ) {
+        let Max = arr[0][0]
+        let Min = arr[0][0]
+
+        for( let i = 0 ; i< m ; i++)
+        {
+            for(let j= 0; j<n ;j ++){
+                if( arr[i][j] > Max)
+                    Max =  arr[i][j]
+
+                if ( arr[i][j] < Min)
+                     Min = arr[i][j]
+            }
+        }
+        let a = [Max,Min];
+        return a
+    }
+
+
+</script>
+</body>
+</html>

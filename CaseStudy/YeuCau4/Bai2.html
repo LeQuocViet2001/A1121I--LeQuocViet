@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let v= prompt(" Nhap chuoi ")
+    v = v.trim()
+    //v =v.toArray();
+  //  v= v.replace(/\s+/g, '')
+
+    let rs = new Array()
+
+    for( let i = 0 ; i < v.length ; i++)
+        if( rs.indexOf(v[i]) < 0 )
+            rs.push( v[i])
+
+
+    alert( "So ky tu khac nhau la Array = " + rs +"\n n = " + rs.length )
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

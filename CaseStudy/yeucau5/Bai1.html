@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let m = parseInt(prompt("Nhap m="))
+    let n = parseInt(prompt("Nhap n="))
+
+    let arr = new Array()
+    let s = 0
+    for ( let i =0 ;i <m ; i++)
+    {
+        arr[i] = new Array()
+        for( let j= 0; j< n ; j++){
+            {
+                let a = parseInt(prompt("" +
+                    "Nhap gia tri Arr[" + i + "]" +
+                    "[" + j + "]= "))
+
+                arr[i][j] = a;
+
+                if(a%2 == 0)
+                    s=s+a;
+            }
+
+        }
+
+
+
+    }
+     let ss = ""
+    for ( let i =0 ;i <m ; i++) {
+           ss += arr[i].toString() + "\n"
+    }
+    alert( "Mang = \n" + ss +" \nTong cac so chan Sum = " + s  )
+
+
+</script>
+</body>
+</html>

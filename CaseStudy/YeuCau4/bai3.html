@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = prompt("nhap xau 1 = ")
+    let b= prompt("nhap xau 2=")
+
+    alert( "xau a =" + a +r "\n xau b =" + b +
+        "\, ket qua = " +commonCharacterCount( xoalap(a), xoalap(b)))
+
+    function commonCharacterCount( a,b) {
+        let rs = new Array()
+        for( let i = 0 ; i< a.length ; i++)
+        {
+            if ( b.indexOf( a[i]) > 0  )
+                rs.push(a[i])
+        }
+     return rs
+    }
+
+    function xoalap(srt) {
+        let rs = ""
+        for ( let i of srt){
+            if ( rs.indexOf(i) < 0 ){
+                rs +=i;
+            }
+        }
+       return rs;
+    }
+
+</script>
+</body>
+</html>

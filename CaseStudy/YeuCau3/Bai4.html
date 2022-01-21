@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let  na = parseInt(prompt("Nham so n = "))
+
+    let arr = []
+    let i = 0
+    let s = ""
+    let n= 0
+
+    while(na != 0) {
+        n = (n * 10) + (na % 10);
+        na /= 10;
+    }
+
+    while ( n!= 0){
+
+
+        switch(n % 10) {
+            case 0:
+                s += "Khong"
+                break;
+            case 1:
+                s += "Mot ";
+                break;
+            case 2:
+                s += "Hai ";
+                break;
+            case 3:
+                s += "Ba ";
+                break;
+            case 4:
+                s += "Bon ";
+                break;
+            case 5:
+                s += "Nam ";
+                break;
+            case 6:
+                s += "Sau ";
+                break;
+            case 7:
+                s += "Bay ";
+                break;
+            case 8:
+                s += "Tam ";
+                break;
+            case 9:
+                s += "Chin ";
+                break;
+        }
+
+        n = n/10 - (n%10)/10;
+    }
+    alert(s)
+
+
+</script>
+</body>
+</html>

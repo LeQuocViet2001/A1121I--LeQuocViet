@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n = parseInt(prompt("Nhap so luong phan so= "))
+
+
+    let ra = new Array(n)
+    for( let i = 0 ; i < n; i++){
+        ra[i] = parseInt( prompt("Nhap numerators[" + i + "]= "))
+    }
+
+    let rb = new Array(n)
+    for( let i = 0 ; i < n ; i++){
+        rb[i] = parseInt( prompt("Nhap denominators[" + i + "]= "))
+    }
+
+    let c = new Array(n)
+
+
+    let max = 0;
+    let id = 0
+    for ( let i = 0 ; i< n; i++){
+        let a = ra[i]/rb[i];
+
+        if( a > max) {
+            max = a;
+            id = i;
+        }
+        c.push(  a )
+
+    }
+
+    alert( "Mang numerators = " + ra + " \n Mang denominators =" + rb
+      + " \n Phan So lon Nhat = " + max + " o vi ti i = " +  id )
+
+
+
+
+</script>
+</body>
+</html>

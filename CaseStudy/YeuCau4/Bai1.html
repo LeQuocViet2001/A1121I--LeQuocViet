@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let v = prompt("Nhan chuoi = ")
+
+    v = v.toLowerCase()
+    v = v .trim()
+    v= v.replace(/\s+/g, ' ')
+
+    let a = v.split(" ")
+    let max = 0
+   for(let i = 0; i< a.length; i++) {
+
+        a[i] = a[i][0].toUpperCase() + a[i].slice(1);
+        if( a[i].length >= max)
+           max = i
+
+
+    }
+
+    alert( a.join(" ") + "\n Tu co do dai dai nhat la : " + a[max] )
+
+
+</script>
+</body>
+</html>

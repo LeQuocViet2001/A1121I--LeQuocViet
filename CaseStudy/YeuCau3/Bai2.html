@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let na = parseInt(prompt("Nhap do dai mang A so nguyen nA= "))
+    let ra = new Array(na)
+    for( let i = 0 ; i < na ; i++){
+        ra[i] = parseInt( prompt("Nhap A[" + i + "]= "))
+    }
+
+
+
+    let nb = parseInt(prompt("Nhap do dai mang B so nguyen nB= "))
+    let rb = new Array(nb)
+    for( let i = 0 ; i < nb ; i++){
+        rb[i] = parseInt( prompt("Nhap B[" + i + "]= "))
+    }
+
+
+    let c = []
+    for ( let i = 0 ; i< nb ; i++){
+
+        if ( ra.indexOf( rb[i] ) < 0  )
+            c.push( rb[i])
+    }
+
+    c.sort()
+    alert(  " Mang A = " + ra + "\n Mang B = " + rb+  " mang Rsult = " + c)
+
+
+</script>
+</body>
+</html>

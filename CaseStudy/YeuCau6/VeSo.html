@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+<div id="tag32-32">
+
+
+
+    <table>
+        <tr>
+            <td id="tagi0">&nbsp;</td>
+        </tr>
+        <tr>
+            <td id="tagi1">&nbsp;</td>
+        </tr>
+        <tr>
+            <td id="tagi2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td id="tagi3">&nbsp;</td>
+        </tr>
+
+
+
+    </table>
+
+
+    <input type="button" value="Mua ve" id="mua" onclick="muave()">
+    <input type="button" value="Xem ket qua" id="ketqua" onclick="tgSo()">
+
+</div>
+</form>
+
+
+<script>
+
+    let maxvt= 0;
+    let arrvs = []
+
+    function muave(){
+        if( maxvt < 4) {
+
+            // document.getElementById("tag0").innerHTML = " <input type='text' style='text-align:center' type='number' id='o' min='0' max='99' size='1' maxlength='2'> "
+            let s = ""
+            let choese = parseInt(prompt("Ban co 2 lua cgon: " +
+                "\n 1. Ban muon tu chon so." +
+                "\n 2. Ban muon randem."))
+
+
+            switch (choese) {
+                case 1:{     // Tu nhap
+
+                    arrvs[maxvt] =  new Array()
+
+                  //  let vt =   "tag"+ maxvt;
+                    let rs = maxvt;
+                    for ( let i = 0 ;i<6 ;i++){
+
+                        s+= "<input type='text' style='text-align:center'   type='number' id='tagi" +maxvt.toString()+ "i"+ i + "' min='0'   max='99'  onchange='fc( this.id )' size='1' maxlength='2'> "
+
+                    }
+                    s += "</br>"
+                    document.getElementById(  "tagi" + maxvt.toString()     ).innerHTML= s;
+                    maxvt++;
+                    break;
+                }
+                case 2:{
+
+                /*    arrvs[maxvt] =  new Array()
+                    for ( let i = 0 ;i<6 ;i++){
+
+                        let tmp  = Math.floor(Math.random()*(99-0+1) + 0)
+
+                     //   s+= "<textarea  style='text-align:center'  disabled='disabled'  type='number' id='tagi" +maxvt.toString()+ "i"+ i + "'  min='0'   max='99' value=' '  size='1' maxlength='2'>  Math.floor(Math.random()*(99-0+1) + 0)</textarea> "
+                    //    s+= "<input type='' style='text-align:center'   type='number' id='tagi" +maxvt.toString()+ "i"+ i + "' min='0'   max='99'  onchange='fc( this.id )' size='1' maxlength='2'> "
+                        arrvs[maxvt][i] = tmp
+                    }
+                    s += "</br>"
+                    document.getElementById(  "tagi" + maxvt.toString()     ).innerHTML= s;
+                    maxvt++;
+                    break;*/
+
+                }
+            }
+
+        }
+        else alert("Mua toi da 4 ve")
+    }
+
+
+   // function ftc(   ids, row  ) {
+   //
+   //          let col =  ids.split("-")[1]
+   //          arrvs[row][col] =  document.getElementById(ids).value;
+   //          alert( row + col)
+   //          }
+
+   function fc(  ids ) {
+        let row = ids.split("i")[1]
+        let col =  ids.split("i")[2]
+        arrvs[row][col] =  document.getElementById(ids).value;
+    }
+
+    function tgSo() {
+
+        alert( arrvs)
+
+        for( let i = 0; i < maxvt; i++)
+              checkSo( arrvs[i] )
+
+            }
+    function  checkSo(  u ) {
+
+
+        let a = [ 1,1,1,1,1,1 ]
+
+
+        let so = 0
+        for( let i = 5; i>=0 ; i--){
+            if ( a[i] != u[i]  )
+                break;
+            else so++;
+
+        }
+
+        if ( so ==6) alert( u + " khung giai dac biet ")
+        else if (so == 5) alert( u + " khung giai nhi")
+        else if (so ==3 || so ==4 ) alert( u + " khung giai khuyen khich")
+        else  alert( u + " Hong trung")
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

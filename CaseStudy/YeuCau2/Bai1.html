@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let i  = parseInt( prompt("Nhap luong = "))
+    let thue = 0
+    let rong = 0
+
+    if ( i >= 15000000){
+        thue = i*20/100;
+
+    }
+    else if (  i < 15000000 && i >= 7000000 ){
+        thue = i * 0.1;
+
+    }
+    else
+        thue = i * 5/100;
+
+    rong = i - thue;
+
+    alert("Thue thu nhap cua nhan vien = " + thue + "\n Luong rong = " + rong)
+
+</script>
+</body>
+</html>
