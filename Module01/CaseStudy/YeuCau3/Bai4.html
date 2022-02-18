@@ -6,15 +6,15 @@
 </head>
 <body>
 <script>
-    let  na = parseInt(prompt("Nham so n = "))
+    let  na = parseInt(prompt("Nham so n = "))   // so nhap va
 
     let arr = []
     let i = 0
     let s = ""
-    let n= 0
+    let n= 0   // so da dao nguoc
 
     while(na != 0) {
-        n = (n * 10) + (na % 10);
+        n = (n * 10) + (na % 10);    // tang n lên 1 hàng đơn vị cộng thêm số cuối cùng của số nhập vào
         na /= 10;
     }
 

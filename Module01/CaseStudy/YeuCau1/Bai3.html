@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu cầu 1 - Bài 3</title>
+</head>
+<body>
+<script>
+    let h = parseInt(prompt("Nhập chiều cao h: "));
+    for(let i = 1; i<=h;i++) {
+        for(let j = 1; j<=h-i;j++) {        // hang  n thì  h - n  space
+            document.write('&nbsp&nbsp')    // Tinh tu duong cao phan giac cua tam giac can
+        }
+        for(let j=1;j<=2*i-1;j++){    //   2n - 1
+            document.write('*');
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

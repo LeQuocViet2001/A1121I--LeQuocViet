@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu cầu 1 - Bài 1</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập chiều dài n của hình chữ nhật: "));
+    let m = parseInt(prompt("Nhập chiều rộng m của hình chữ nhật: "));
+    for(let i=1; i<=m; i++){
+        for(let k=1; k<=n; k++){
+            if(i==1 || k==1 || i==m || k==n){
+                document.write('*');
+            }else{
+                document.write('&nbsp&nbsp')
+            }
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

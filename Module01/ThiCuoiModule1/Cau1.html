@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+
+<script>
+    let n;
+    do{
+        n = parseInt(prompt("Nhap sp nguyen n (n<=50)"));
+        if( n>50) alert(" n >50: Xin nhap lai n")
+    }while ( n>50 )
+    let arr1 = new Array(n);
+    for( let i = 0 ; i <n ; i++){
+        arr1[i] = parseInt(prompt("Phan tu Arr[" + i+"]= ") )
+    }
+    alert("Mang Arr= " + arr1)
+    let Sum = 0
+    let tb = 0
+    for( let  i = 0 ; i < n ; i = i + 2){
+          if( arr1[i] %2 == 1) {
+              Sum += arr1[i];
+              tb =tb +1
+          }
+    }
+    if( tb>0){
+        let arv = Sum/tb
+        alert("Trung binh cong cac so le o vi tri chan la  Avr= " + arv )
+    }
+    else{
+        alert("Khong co so le o vi tri chan nao trong mang")
+    }
+
+</script>
+
+</body>
+</html>

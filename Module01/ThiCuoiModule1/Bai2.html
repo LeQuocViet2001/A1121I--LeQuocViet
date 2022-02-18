@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>So than thiet</title>
+</head>
+<body>
+
+
+<script>
+    // khai bao Nhap 2 so nguyen duong
+    let a,b;
+    do{
+        a = parseInt(prompt("Nhap sp nguyen duong a= "));
+        if(  !Number.isInteger(a) || a<0) alert(" Xin nhap lai so nguyen duong a")
+    }while (  !Number.isInteger(a) || a<0 );
+
+    do{
+        b = parseInt(prompt("Nhap sp nguyen duong b= "));
+        if(  !Number.isInteger(b) || b<0) alert(" Xin nhap lai so nguyen duong b")
+    }while (  !Number.isInteger(b) || b<0 );
+    //////////////////////
+
+    if(  soThanThiet(a,b) == true ) {
+        alert( "a= " + a + " va b= " + b + " la 2 so than thiet");
+    }
+    else  alert( "a= " + a + " va b= " + b + " khong phai la 2 so than thiet");
+
+
+
+    //////////////////
+    function soThanThiet(a,b) {
+        let u1 = tongUoc(a);
+        let u2 = tongUoc(b);
+
+        if(  u1 == b && u2 ==a )
+        return true;
+        else return false;
+    }
+
+    function tongUoc(u) {
+        let Sum = 0
+        for( let i = 0 ; i<u ; i++)
+        {
+            if( u%i ==0)
+               Sum += i;
+        }
+        return Sum;
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

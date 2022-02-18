@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+
+  <h3 style="text-align: center">Quan ly sach</h3>
+    <table class="table" >
+        <thead>   <tr>
+            <th>Ma So Sach</th>
+            <th>Ten Sach</th>
+            <th>Nam xuat ban</th>
+            <th>So quyen</th>
+            <th>Tinh trang</th>
+          </tr>
+        </thead>
+        <tbody id ="result">
+
+        </tbody>
+
+
+    </table>
+    <br>
+  <div style="text-align: center;">
+      <button type="button" onclick="">Thêm sách đã có</button>
+      <button type="button" onclick="addNewBook()">Thêm sách mới</button>
+      <button type="button" onclick="">Mượn sách</button>
+      <button type="button" onclick="">Hiển thị sách nhiều nhất</button>
+  </div>
+
+
+  <script>
+
+      class book{
+          constructor(id, ten ,nam, soluong, tinhtrang) {
+              this.id = id;
+              this.ten = ten;
+              this.nam = nam;
+              this.soluong =soluong;
+              this.tinhtrang =tinhtrang;
+          }
+      }
+
+
+      let   sachList = [];
+
+      function addNewBook() {
+          let id = prompt("Nhap id sach moi id =");
+          let ten = prompt("Nhap ten sach");
+          let nam = parseInt( prompt("Nhap nam xuat ban"));
+          let soluong = parseInt( prompt("Nhap so luong sach"));
+          let tt =  (soluong>0)?true:false;
+
+          let b = new book(id,ten, nam,soluong,tt)
+          sachList.push(b);
+
+           document.getElementById('result').innerHTML = ""
+
+           for(let i=0;i<sachList.length;i++) {
+               document.getElementById('result').innerHTML +=
+               `<tr>
+
+		 	    <td>${sachList[i].id}</td>
+			 	<td>${sachList[i].ten}</td>
+			 	<td>${sachList[i].nam}</td>
+			 	<td>${sachList[i].soluong}</td>
+			 	<td>${sachList[i].tinhtrang}</td>
+			    </tr>` }
+
+      }
+
+  </script>
+
+  <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+        }
+
+  </style>
+
+</body>
+</html>

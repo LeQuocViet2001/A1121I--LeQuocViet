@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu câu 1 - Bài 4</title>
+</head>
+<body>
+<script>
+    let h = parseInt(prompt("Nhập chiều cao h: "));
+    for(let i = 1; i<=h;++i) {      //Chạy h hang
+        for(let j = 1; j <= h+i-1; ++j) {           // Coi như 1 hình vuong h * h
+            if(j == h-i+1 || j == h+i-1 || i==h){   // Nêu ở vị trí vẻ tam giac thi *
+                document.write('*');
+            }else{
+                document.write('&nbsp&nbsp');
+            }
+        }document.write("<br>");
+    }document.write("<br>");
+
+</script>
+</body>
+</html>
