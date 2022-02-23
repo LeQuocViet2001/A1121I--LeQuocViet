@@ -4,6 +4,11 @@ import java.util.Scanner;
 
     public class LoaiHinh {
         public static void main(String[] args) {
+
+
+
+
+
             int choice = -1;
             Scanner scanner = new Scanner(System.in);
             while(choice != 0) {
