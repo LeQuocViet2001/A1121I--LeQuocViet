@@ -19,10 +19,7 @@ public class StopWatch {
         this.endTime = endTime;
     }
 
-    public start(){
 
-        this.starTime = LocalDateTime.now();
-    }
 
 
 }

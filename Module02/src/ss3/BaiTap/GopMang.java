@@ -6,7 +6,8 @@ public class GopMang {
 
         int  [] arr1   = {1,2,4,5,3,5};
         int []  arr2  =  {3,5,7,4,3,4,4,6,3};
-
+  String a = "Sadas";
+  a.
         int []  arr3 = new int[ arr1.length + arr2.length];
 
 
