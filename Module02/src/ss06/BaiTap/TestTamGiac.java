@@ -4,7 +4,7 @@ import ss06.ThucHanh.Shape;
 
 import java.util.Scanner;
 
-public class TestTamGiac {
+public  class TestTamGiac {
 
 
     public static void main(String[] args) {

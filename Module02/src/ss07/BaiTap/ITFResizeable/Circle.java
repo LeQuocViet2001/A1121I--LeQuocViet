@@ -1,8 +1,6 @@
-package ss06.BaiTap;
+package ss07.BaiTap.ITFResizeable;
 
-import javax.crypto.spec.PSource;
-
-public class Circle {
+public class Circle implements Resizeable {
     private double r = 0;
     private String color = "black";
 
@@ -11,7 +9,7 @@ public class Circle {
     public Circle() {
     }
 
-    public Circle( double r) {
+    public Circle(double r) {
         this.r = r;
     }
 
@@ -48,5 +46,10 @@ public class Circle {
                 ", Dien Tich = " + this.getArea()  +
 
                 '}';
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.r += this.r*percent;
     }
 }
