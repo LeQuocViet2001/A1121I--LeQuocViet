@@ -21,4 +21,7 @@ public class Square extends Shape {
     public void setA(double a) {
         this.a = a;
     }
+
+
+
 }
