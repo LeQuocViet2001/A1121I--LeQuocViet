@@ -35,10 +35,14 @@ public class ThemPt {
                 arr2[i] = arr[i];
 
             }
-            arr2[x] =a;
+
             for( int i = x+1; i<n+1; i++ ){
                 arr2[i] = arr[i-1];
             }
+
+            arr2[x] =a;
+
+
             for (int i = 0 ; i < n +1  ; i++){
                 System.out.print(arr2[i] + " ");
             }
