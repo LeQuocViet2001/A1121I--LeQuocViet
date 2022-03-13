@@ -21,19 +21,55 @@ public class MyList<E> {
 
     public  void  add( int index, E element){
 
-        if( size == elements.length)
+        if( index >  elements.length)
+            throw  new IllegalArgumentException("Tran  ");
+        else if ( size == elements.length)
             elements = Arrays.copyOf(elements,  size+1 );
 
+       if( elements[index] == null)
+           elements[index] = element;
+        else {
 
+
+        size++;
         for(int i = index + 1 ; i<size; i++  ){
             elements[i] = elements[i-1];
         }
         elements[index] = element;
+
+
+        //
+//           for( int i= size+1; i>=index ; i--){
+//               elements[i] =elements[i-1];
+//
+//           }
+//           elements[index] =element;
+//           size++;
+        }
+
+
+
+    }
+
+    public boolean add( E e){
+
+        elements[size] =e;
+        size++;
+        return true;
     }
 
     public int size (){
-        return size;
+        return this.size;
     }
+
+    public void clear(){
+        size = 0;
+        for ( int i = 0;  i< elements.length; i++){
+            elements[i] =null;
+        }
+
+    }
+
 
     public  E remove (int index){
         E e = (E)elements[index];
@@ -55,6 +91,11 @@ public class MyList<E> {
           }
 
           return false;
+    }
+
+
+    public E get(int index){
+        return (E)elements[index];
     }
 
 
