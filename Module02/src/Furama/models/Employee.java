@@ -1,0 +1,38 @@
+package Furama.models;
+
+public class Employee extends Person{
+    private String trinhDo;
+    private  String viTri;
+    private double luong;
+
+    public String getTrinhDo() {
+        return trinhDo;
+    }
+
+    public void setTrinhDo(String trinhDo) {
+        this.trinhDo = trinhDo;
+    }
+
+    public String getViTri() {
+        return viTri;
+    }
+
+    public void setViTri(String viTri) {
+        this.viTri = viTri;
+    }
+
+    public double getLuong() {
+        return luong;
+    }
+
+    public void setLuong(double luong) {
+        this.luong = luong;
+    }
+
+    public Employee(int id, String hoTen, int tuoi, boolean gioiTinh, long soDT, String email, String trinhDo, String viTri, double luong) {
+        super(id, hoTen, tuoi, gioiTinh, soDT, email);
+        this.trinhDo = trinhDo;
+        this.viTri = viTri;
+        this.luong = luong;
+    }
+}
