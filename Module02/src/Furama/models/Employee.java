@@ -35,4 +35,15 @@ public class Employee extends Person{
         this.viTri = viTri;
         this.luong = luong;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                super.toString() + '\'' +
+                "trinhDo='" + trinhDo + '\'' +
+                ", viTri='" + viTri + '\'' +
+                ", luong=" + luong +
+                '}';
+    }
 }
+

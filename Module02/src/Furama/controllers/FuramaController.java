@@ -1,5 +1,7 @@
 package Furama.controllers;
 
+import Furama.service.Impl.EmployeeServiceImpl;
+
 import java.util.Scanner;
 
 
@@ -59,6 +61,8 @@ public class FuramaController {
     }
 
     public static void displayEmployeeMenu(){
+        EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+
         boolean check = true;
         while ((check)){
             System.out.println("1. Display list employees");
@@ -71,10 +75,12 @@ public class FuramaController {
             switch (scanner.nextInt()){
                 case 1: {
                     System.out.println("1. Display list employees");
+                    employeeService.display();
                     break;
                 }
                 case 2:{
                     System.out.println("2. Add new employee");
+                    employeeService.addNew();
                     break;
                 }
                 case 3:{

@@ -27,4 +27,13 @@ public class Customer extends Person {
         this.loaiKhach = loaiKhach;
         this.diaChi = diaChi;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                super.toString() + '\'' +
+                "loaiKhach='" + loaiKhach + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                '}';
+    }
 }

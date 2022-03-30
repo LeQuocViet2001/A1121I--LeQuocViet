@@ -45,6 +45,17 @@ public class Person {
         return gioiTinh;
     }
 
+    @Override
+    public String toString() {
+        return
+                "id=" + id +
+                ", hoTen='" + hoTen + '\'' +
+                ", tuoi=" + tuoi +
+                ", gioiTinh=" + gioiTinh +
+                ", soDT=" + soDT +
+                ", email='" + email + '\'';
+    }
+
     public void setGioiTinh(boolean gioiTinh) {
         this.gioiTinh = gioiTinh;
     }
