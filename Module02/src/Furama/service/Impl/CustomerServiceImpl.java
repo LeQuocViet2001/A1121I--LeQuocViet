@@ -64,7 +64,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void edit(int ID) {
+    public void edit() {
 
     }
 
