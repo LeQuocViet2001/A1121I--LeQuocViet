@@ -9,9 +9,9 @@ import java.util.Scanner;
 public class ReadFileExample {
 
     public static void main(String[] args) {
-        System.out.println("Nhập đường dẫn file: ");
-        Scanner scanner = new Scanner(System.in);
-        String path = scanner.nextLine();
+      //  System.out.println("Nhập đường dẫn file: ");
+      //  Scanner scanner = new Scanner(System.in);
+        String path = "C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\ss16TextFile\\ThucHanh\\numbers.txt";
 
         ReadFileExample readfileEx = new ReadFileExample();
         readfileEx.readFileText(path);

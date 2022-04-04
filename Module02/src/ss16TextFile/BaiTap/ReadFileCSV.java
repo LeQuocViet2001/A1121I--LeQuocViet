@@ -22,20 +22,17 @@ public class ReadFileCSV {
             line = reader.readLine();
             while ((line = reader.readLine()) != null) {
                 String[] values = line.split(SEPARATION);
-                String id = values[0];
+                int id =  Integer.parseInt(values[0]  );
                 String name = values[1];
-                int age = Integer.parseInt(values[2]);
-                countries.add(   );
+                String age =   values[2];
+                countries.add( new Countries(id,name,age)   );
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return students;
+        return countries;
     }
 
-
-
-
     }
-}
+
