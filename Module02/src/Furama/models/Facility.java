@@ -3,14 +3,24 @@ package Furama.models;
 public abstract class Facility {
 
 
-
+     public int Id;
      public String tenDichVu;
-     public String dienTichDung;
+     public double dienTichDung;
      public double chiPhiThue;
      public int soLuongNguoiMax;
-     public String kieuThue;
 
-    public Facility(String tenDichVu, String dienTichDung, double chiPhiThue, int soLuongNguoiMax, String kieuThue) {
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public String kieuThue;
+
+    public Facility(int id, String tenDichVu, double dienTichDung, double chiPhiThue, int soLuongNguoiMax, String kieuThue) {
+        Id = id;
         this.tenDichVu = tenDichVu;
         this.dienTichDung = dienTichDung;
         this.chiPhiThue = chiPhiThue;
@@ -22,15 +32,27 @@ public abstract class Facility {
         return tenDichVu;
     }
 
+    @Override
+    public String toString() {
+        return "Facility{" +
+                "Id=" + Id +
+                ", tenDichVu='" + tenDichVu + '\'' +
+                ", dienTichDung=" + dienTichDung +
+                ", chiPhiThue=" + chiPhiThue +
+                ", soLuongNguoiMax=" + soLuongNguoiMax +
+                ", kieuThue='" + kieuThue + '\'' +
+                '}';
+    }
+
     public void setTenDichVu(String tenDichVu) {
         this.tenDichVu = tenDichVu;
     }
 
-    public String getDienTichDung() {
+    public double getDienTichDung() {
         return dienTichDung;
     }
 
-    public void setDienTichDung(String dienTichDung) {
+    public void setDienTichDung(double dienTichDung) {
         this.dienTichDung = dienTichDung;
     }
 

@@ -1,8 +1,8 @@
 package Furama.models;
 
     public class Contract {
-        private String idContract;
-        private String idBooking;
+        private int idContract;
+        private int idBooking;
         private double deposit;  //số tiền đặt cọc
         private double totalMoney;
         private String idCustomer;
@@ -12,7 +12,7 @@ package Furama.models;
         public Contract() {
         }
 
-        public Contract(String idContract, String idBooking, double deposit, double totalMoney, String idCustomer) {
+        public Contract(int idContract, int idBooking, double deposit, double totalMoney, String idCustomer) {
             this.idContract = idContract;
             this.idBooking = idBooking;
             this.deposit = deposit;
@@ -22,19 +22,19 @@ package Furama.models;
 
         //getter setter
 
-        public String getIdContract() {
+        public int getIdContract() {
             return idContract;
         }
 
-        public void setIdContract(String idContract) {
+        public void setIdContract(int idContract) {
             this.idContract = idContract;
         }
 
-        public String getIdBooking() {
+        public int getIdBooking() {
             return idBooking;
         }
 
-        public void setIdBooking(String idBooking) {
+        public void setIdBooking(int idBooking) {
             this.idBooking = idBooking;
         }
 

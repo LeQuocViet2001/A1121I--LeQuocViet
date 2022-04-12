@@ -26,15 +26,29 @@ public class Villa extends Facility {
         return soTang;
     }
 
+    @Override
+    public String toString() {
+        return "Villa{" +
+                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", dienTichHoBoi=" + dienTichHoBoi +
+                ", soTang=" + soTang +
+                ", Id=" + Id +
+                ", tenDichVu='" + tenDichVu + '\'' +
+                ", dienTichDung=" + dienTichDung +
+                ", chiPhiThue=" + chiPhiThue +
+                ", soLuongNguoiMax=" + soLuongNguoiMax +
+                ", kieuThue='" + kieuThue + '\'' +
+                '}';
+    }
+
     public void setSoTang(int soTang) {
         this.soTang = soTang;
     }
 
-    public Villa(String tenDichVu, String dienTichDung, double chiPhiThue, int soLuongNguoiMax, String kieuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang) {
-        super(tenDichVu, dienTichDung, chiPhiThue, soLuongNguoiMax, kieuThue);
+    public Villa(int id, String tenDichVu, double dienTichDung, double chiPhiThue, int soLuongNguoiMax, String kieuThue, String tieuChuanPhong, double dienTichHoBoi, int soTang) {
+        super(id, tenDichVu, dienTichDung, chiPhiThue, soLuongNguoiMax, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichHoBoi = dienTichHoBoi;
         this.soTang = soTang;
     }
-
 }

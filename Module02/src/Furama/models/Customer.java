@@ -1,6 +1,8 @@
 package Furama.models;
 
-public class Customer extends Person {
+import java.io.Serializable;
+
+public class Customer extends Person implements Serializable  {
 
 
    private String loaiKhach;

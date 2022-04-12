@@ -1,14 +1,14 @@
 package Furama.models;
 
 public class Booking {
-    private String idBooking;
+    private int idBooking;
     private String startDate;
     private String endDate;
-    private String idCustomer;
+    private int idCustomer;
     private String nameService;
-    private String optionService;
+    private Facility optionService;
 
-    public Booking(String idBooking, String startDate, String endDate, String idCustomer, String nameService, String optionService) {
+    public Booking(int idBooking, String startDate, String endDate, int idCustomer, String nameService, Facility optionService) {
         this.idBooking = idBooking;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -17,11 +17,11 @@ public class Booking {
         this.optionService = optionService;
     }
 
-    public String getIdBooking() {
+    public int getIdBooking() {
         return idBooking;
     }
 
-    public void setIdBooking(String idBooking) {
+    public void setIdBooking(int idBooking) {
         this.idBooking = idBooking;
     }
 
@@ -41,11 +41,11 @@ public class Booking {
         this.endDate = endDate;
     }
 
-    public String getIdCustomer() {
+    public int getIdCustomer() {
         return idCustomer;
     }
 
-    public void setIdCustomer(String idCustomer) {
+    public void setIdCustomer(int idCustomer) {
         this.idCustomer = idCustomer;
     }
 
@@ -57,11 +57,11 @@ public class Booking {
         this.nameService = nameService;
     }
 
-    public String getOptionService() {
+    public Facility getOptionService() {
         return optionService;
     }
 
-    public void setOptionService(String optionService) {
+    public void setOptionService(Facility optionService) {
         this.optionService = optionService;
     }
 
@@ -74,7 +74,6 @@ public class Booking {
                 ", endDate='" + endDate + '\'' +
                 ", idCustomer='" + idCustomer + '\'' +
                 ", nameService='" + nameService + '\'' +
-                ", optionService='" + optionService + '\'' +
                 '}';
     }
 }
