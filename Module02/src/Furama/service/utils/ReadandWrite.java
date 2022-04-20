@@ -12,7 +12,7 @@ public class ReadandWrite {
 
 
     /////Doc ghi bang Byte
-    public static void writeByte(String path, Collection collection)  {
+    public static void writeListByte(String path, Object collection)  {
 
         File file = new File(path);
         if (!file.exists())

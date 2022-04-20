@@ -2,16 +2,27 @@ package ss16TextFile.BaiTap;
 
 import ss12.ThucHanh.Student;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadFileCSV {
+public class ReadWriteFileCSV {
 
 
-    private static String SEPARATION;
+    private static String SEPARATION = ",";
+
+    public static void  WriteListContries(String path, Object o){
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter(path, true)) ){
+
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static List<Countries> ReadListCountries(String path){
 
         List<Countries> countries = new ArrayList<>();

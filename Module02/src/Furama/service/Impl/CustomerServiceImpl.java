@@ -1,18 +1,16 @@
 package Furama.service.Impl;
 
 import Furama.models.Customer;
-import Furama.models.Employee;
 import Furama.service.CustomerService;
 import Furama.service.utils.ReadandWrite;
 
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerService {
 
-    List<Customer> customerList = new ArrayList<>();
+    List<Customer>     customerList = (List<Customer>) ReadandWrite.readByte("C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\customer.csv");
+
     Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -57,8 +55,7 @@ public class CustomerServiceImpl implements CustomerService {
 
         Customer customer = new Customer(id, name,tuoi,gioiTinh,soDT,email,loaiKhach,diaChi);
         customerList.add(customer);
-
-        ReadandWrite.writeByte( "C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\customer.csv" , customerList);
+        ReadandWrite.writeListByte( "C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\customer.csv" , customerList);
 
 
     }

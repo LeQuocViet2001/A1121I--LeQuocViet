@@ -1,6 +1,10 @@
 package Furama.models;
 
-public abstract class Facility {
+import Furama.service.utils.ReadandWrite;
+
+import java.io.Serializable;
+
+public abstract class Facility implements Serializable {
 
 
      public int Id;
@@ -27,6 +31,9 @@ public abstract class Facility {
         this.soLuongNguoiMax = soLuongNguoiMax;
         this.kieuThue = kieuThue;
     }
+
+
+
 
     public String getTenDichVu() {
         return tenDichVu;

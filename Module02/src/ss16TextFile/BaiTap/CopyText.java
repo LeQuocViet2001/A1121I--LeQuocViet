@@ -6,15 +6,11 @@ import java.util.Scanner;
 
 public class CopyText {
 
-    static   String fSource = "C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\ss16TextFile\\BaiTap\\sourceFile.txt";
+     static   String fSource = "C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\ss16TextFile\\BaiTap\\sourceFile.txt";
      static   String fTaget = "C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\ss16TextFile\\BaiTap\\tagetFile.txt";
 
 
-
-
     public static void CopyFile ( String pSource, String pTaget){
-
-
         try {
             File fSource = new File(pSource);
             File fTaget = new File(pTaget);

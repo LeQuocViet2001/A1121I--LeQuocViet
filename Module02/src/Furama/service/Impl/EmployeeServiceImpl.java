@@ -4,14 +4,13 @@ import Furama.models.Employee;
 import Furama.service.EmployeeService;
 import Furama.service.utils.ReadandWrite;
 
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private static List<Employee> employeeList = new ArrayList<>();
+    private static List<Employee>  employeeList = (List<Employee>) ReadandWrite.readByte("C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\employee.csv");
+
     private static Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -36,7 +35,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         String name = scanner.nextLine();
 
         System.out.println("Nhap tuoi: ");
-        int tuoi = scanner.nextInt();
+        int tuoi =    scanner.nextInt();
 
         System.out.println("Nam/ Nu: ");
         boolean gioiTinh = scanner.nextBoolean();
@@ -60,7 +59,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee = new Employee( id, name, tuoi, gioiTinh,soDT, email, trinhDo,viTri,luong );
         employeeList.add(employee);
 
-        ReadandWrite.writeByte("C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\employee.csv", employeeList);
+        ReadandWrite.writeListByte("C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\employee.csv", employeeList);
 
 
     }

@@ -79,34 +79,23 @@ public class BookingServiceImpl  implements BookingService {
                     return customer;
                 }
             }
-
-
             if(check){
                 System.out.println("Khong co id duocj tim thay");
             }
-
-
         }
-
-
-
         return  null;
     }
-
 
     public  static  Facility chooseFacility(){
         System.out.println("Danh sach dich vu");
        for( Map.Entry<Facility, Integer>  entry : facilityIntegerMap.entrySet()){
-
            System.out.println( entry);
        }
-
         System.out.println("NHap id dich vu");
         boolean check = true;
         int id ;// = Integer.parseInt(scanner.nextLine());
 
         while (check){
-
             id  = Integer.parseInt(scanner.nextLine());
             for( Map.Entry<Facility, Integer>  entry : facilityIntegerMap.entrySet()){
                 if(  id == entry.getKey().getId() ){
@@ -114,7 +103,6 @@ public class BookingServiceImpl  implements BookingService {
                     return entry.getKey();
                 }
             }
-
             if(check){
                 System.out.println("Khong co id duocj tim thay");
             }

@@ -5,6 +5,7 @@ import Furama.models.House;
 import Furama.models.Room;
 import Furama.models.Villa;
 import Furama.service.FacilityService;
+import Furama.service.utils.ReadandWrite;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -59,6 +60,8 @@ public class FacilityServerImpl implements FacilityService {
 
         Villa villa = new Villa(id,tenDichVu,dienTichDung,chiPhiThue,soNguoi,kieuThue,tieuChuanPhong,DtHoBoi,soTang);
 
+
+      //  ReadandWrite.writeByte("C:\\Users\\ASUS\\Desktop\\CG\\A1121I1\\Module02\\src\\Furama\\Data\\Villa.csv", villa);
         facilityIntegerMap.put(villa,0);  // hien tai la 0l; sao nay book king thi co ng 1
 
     }

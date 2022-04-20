@@ -73,8 +73,6 @@ public class FuramaController {
     public static void displayEmployeeMenu()  {
         EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
 
-
-
         boolean check = true;
         while ((check)){
             System.out.println("1. Display list employees");
