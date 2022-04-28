@@ -31,9 +31,38 @@ INSERT INTO `ss02_qlban_hang`.`order_detail` (`oid`, `pid`, `odqty`) VALUES ('2'
 
 select oid,odate, ototal_price from `order`;
 
-select * from order_detail 
+
+
+
+select customer.cid, customer.cname, pname from order_detail 
+join product on product.pid = order_detail.pid
 right join `order` on order_detail.oid = `order`.oid
-left join customer on `order`.cid = customer.cid
+left join customer on `order`.cid = customer.cid;
 
 
 
+select customer.cid, customer.cname, pname from order_detail 
+join product on product.pid = order_detail.pid
+right join `order` on order_detail.oid = `order`.oid
+left join customer on `order`.cid = customer.cid;
+
+
+select * from order_detail 
+join product on product.pid = order_detail.pid
+right join `order` on order_detail.oid = `order`.oid
+left join customer on `order`.cid = customer.cid;
+
+
+select * from customer 
+where  cid not in 
+(select cid from `order` join order_detail on  pid = pid ); 
+
+
+select `order`.oid, oDate, (odQTY * pPrice )  as oTotal_Price    from Order_Detail
+right join product on product.pid = Order_Detail.pid
+right join `order` on order_detail.oid =`order`.oid
+group by `order`.oid;
+
+
+select * from product;
+select * from order_detail;
