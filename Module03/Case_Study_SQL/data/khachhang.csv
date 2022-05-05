@@ -1,11 +1,11 @@
-﻿ma_khach_hang,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi,ma_loai_khach
-1,Nguyen Thi Hao,1970-11-07,0,643431213,945423362,thihao07@gmail.com,1111,5
-2,Pham Xuan Dieu,1992-08-08,1,865342123,954333333,xuandieu92@gmail.com,1111,3
-3,Truong Dinh Nghe,1990-02-27,1,488645199,373213122,nghenhan2702@gmail.com,1111,1
-4,Duong Van Quan,1981-07-08,1,543432111,490039241,duongquan@gmail.com,1111,1
-5,Hoang Tran Nhi Nhi,1995-12-09,0,795453345,312345678,nhinhi123@gmail.com,1111,4
-6,Ton Nu Moc Chau,2005-12-06,0,732434215,988888844,tonnuchau@gmail.com,1111,4
-7,Nguyen My Kiem,1984-04-08,0,856453123,912345698,kimcuong84@gmail.com,1111,1
-8,Nguyen Thi Hao,1999-04-08,0,965656433,763212345,haohao99@gmail.com,1111,3
-9,Tran Dai Danh,1994-07-01,1,432341235,643343433,danhhai99@gmail.com,1111,1
-10,Nguen Tam Dac,1989-07-01,1,344343432,987654321,dactam@gmail.com,1111,2
+﻿ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi
+1,5,Nguyen Thi Hao,11/7/1970,0,643431213,945423362,thihao07@gmail.com,"23 Nguyễn Hoàng, Đà Nẵng"
+2,3,Pham Xuan Dieu,8/8/1992,1,865342123,954333333,xuandieu92@gmail.com,"K77/22 Thái Phiên, Quảng Trị"
+3,1,Truong Dinh Nghe,2/27/1990,1,488645199,373213122,nghenhan2702@gmail.com,"K323/12 Ông Ích Khiêm, Vinh"
+4,1,Duong Van Quan,7/8/1981,1,543432111,490039241,duongquan@gmail.com,"K453/12 Lê Lợi, Đà Nẵng"
+5,4,Hoang Tran Nhi Nhi,12/9/1995,0,795453345,312345678,nhinhi123@gmail.com,"224 Lý Thái Tổ, Gia Lai"
+6,4,Ton Nu Moc Chau,12/6/2005,0,732434215,988888844,tonnuchau@gmail.com,"37 Yên Thế, Đà Nẵng"
+7,1,Nguyen My Kiem,4/8/1984,0,856453123,912345698,kimcuong84@gmail.com,"K123/45 Lê Lợi, Hồ Chí Minh"
+8,3,Nguyen Thi Hao,4/8/1999,0,965656433,763212345,haohao99@gmail.com,"55 Nguyễn Văn Linh, Kon Tum"
+9,1,Tran Dai Danh,7/1/1994,1,432341235,643343433,danhhai99@gmail.com,"24 Lý Thường Kiệt, Quảng Ngãi"
+10,2,Nguen Tam Dac,7/1/1989,1,344343432,987654321,dactam@gmail.com,"22 Ngô Quyền, Đà Nẵng"

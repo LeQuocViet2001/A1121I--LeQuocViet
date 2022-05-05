@@ -63,12 +63,14 @@ set sql_safe_updates = 0;
   -- Task 17
 create view khachhang_tiem as
 select  kl.ma_khach_hang , kl.ma_loai_khach  ,kl.ten_loai_khach, ho_ten, ma_hop_dong, ten_dich_vu, ngay_lam_hop_dong, ngay_ket_thuc, 
-  sum(   ifnull(h.so_luong,0) * ifnull( h.gia, 0 )) +   ifnull(chi_phi_thue,0) as tong_tien 
+  sum(   ifnull(h.so_luong,0) * ifnull( h.gia, 0 )  )   +   ifnull(chi_phi_thue,0)    as tong_tien 
 from  khachhang_loaikhach kl 
 left join hopdong_chitiet_full h on h.ma_khach_hang = kl.ma_khach_hang    
 left join dich_vu  dv on dv.ma_dich_vu =  h.ma_dich_vu  
 left join loai_khach lk on lk.ma_loai_khach = kl.ma_loai_khach  
  group by  kl.ma_khach_hang order by  kl.ma_khach_hang; 
+
+select * from  khachhang_tiem;
 
 set sql_safe_updates = 0;
 update  khach_hang u set u.ma_loai_khach = 1  where ma_khach_hang  in ( 
@@ -79,9 +81,14 @@ set sql_safe_updates = 1;
 -- task 18
 
 
-
 ALTER TABLE hop_dong
 DROP FOREIGN KEY hop_dong_ibfk_2;
+
+ALTER TABLE hop_dong_chi_tiet
+DROP FOREIGN KEY hop_dong_chi_tiet_ibfk_1;
+
+
+
 ALTER TABLE hop_dong 
 ADD CONSTRAINT hop_dong_ibfk_2
   FOREIGN KEY (ma_khach_hang)
@@ -91,6 +98,7 @@ ADD CONSTRAINT hop_dong_ibfk_2
   
 ALTER TABLE hop_dong_chi_tiet
 DROP FOREIGN KEY hop_dong_chi_tiet_ibfk_1;
+
 ALTER TABLE hop_dong_chi_tiet 
 ADD CONSTRAINT hop_dong_chi_tiet_ibfk_1
  foreign key(ma_hop_dong)
@@ -105,4 +113,14 @@ set sql_safe_updates = 1;
 
 -- Task 19
 
-select * from hopdong_chitiet_full;
+set sql_safe_updates = 0;
+
+update dich_vu_di_kem set gia =  gia * 2 where ma_dich_vu_di_kem in  (
+select a.ma_dich_vu_di_kem from (
+select h.ma_dich_vu_di_kem, sum(so_luong) as so_lan from hop_dong_chi_tiet h
+left join dich_vu_di_kem  k on k.ma_dich_vu_di_kem =  h.ma_dich_vu_di_kem 
+where h.ma_hop_dong 
+in (select  ma_hop_dong from hop_dong where  year(ngay_lam_hop_dong) = 2020)
+group by h.ma_dich_vu_di_kem having so_lan >=10  ) as a   
+);
+set sql_safe_updates = 1;
