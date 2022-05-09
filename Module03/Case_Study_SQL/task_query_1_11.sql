@@ -100,6 +100,8 @@ select  month(h.ngay_lam_hop_dong) as "thang" ,  count(ma_khach_hang) as "so_luo
   from hopdong_chitiet_full group by  ma_hop_dong order by ma_hop_dong ;
   
   
+  
+  
   -- task 11
   select k.ma_dich_vu_di_kem, k.ten_dich_vu_di_kem from hop_dong h left join hop_dong_chi_tiet  d on h.ma_hop_dong = d.ma_hop_dong
   left join dich_vu_di_kem k on k.ma_dich_vu_di_kem = d.ma_dich_vu_di_kem
