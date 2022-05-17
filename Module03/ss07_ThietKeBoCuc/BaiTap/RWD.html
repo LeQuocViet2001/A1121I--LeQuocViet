@@ -48,10 +48,7 @@
                 text-align: center;
                 color: red;
             }
-            button{
-                color: aqua;
-                background-color: blueviolet;
-            }
+
         }
         @media only screen and (min-width:741px)and (max-width:1240px) {
             .col-md-1 {width: 8.33333%;}
@@ -67,10 +64,6 @@
             .col-md-11 {width: 91.66667%;}
             .col-md-12 {width: 100%;}
 
-            button{
-                color: red;
-                background-color: blueviolet;
-            }
         }
 
         @media only screen and (min-width:1241px){
@@ -86,13 +79,6 @@
             .col-l-10 {width: 83.33333%;}
             .col-l-11 {width: 91.66667%;}
             .col-l-12 {width: 100%;}
-
-            button{
-                color:darkolivegreen;
-                background-color:rgba(42, 86, 157, 0.429);
-            }
-
-
 
 
         }
@@ -114,15 +100,40 @@
             height: 70%;
         }
 
+        .left .right{
+            background-color:aquamarine;
+            
+        }
+
+        ol li {
+            margin-top: 30px;
+            margin-left: 50px;
+
+        }
+
+        ul li{
+            margin-left: 30px;
+            font-size: large;
+            font-weight:bold;
+            margin-top: 10px;
+            margin-left: 30px;
+
+        }
+
+        button{
+            width: 200px;
+            height: 200px;
+            
+        }
+
     </style>
 
 </head>
 <body>
 
     
-    <div class=" header">
-        <div class="row">
-            <div id="menu" class="col-l-10">
+    <div class=" row header">
+        <div id="menu" class="col-l-12" >
             <ul>
                 <li><a href="#">Logo</a>
                     <ul>
@@ -146,62 +157,48 @@
                 <li><a href="#">Project</a></li>
                 <li><a href="#">Project</a></li>
             </ul>
-            </div>
-         </div>
-       </div>
+        </div>
     </div>
 
 
 
     <div class="row main">
 
-        <div class=" col-l-3">
+        <div class=" col-l-3 left">
             <ol>
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 1</a></li>             
             </ol>
         </div>
-        <div class=" col-l-6">
-            sdfjakfsfsfsdfjsfksf
-            àlsfsfksfksflsdfkdsf
-            sfsdflksdfkm;sdkf;sdkfsdfks;dkf
-            sdfsdlkfmgjoerp ạerg
+        <div class=" col-l-6 ">
+           <div class="row ">
+                 <div class=" col-l-12">  
+                    <h1  >Welcome</h1>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat.
+                </div>
+                    <div class="  col-l-12">
+                        <h1>Test</h1>
+                        Lorem ipsum..
+                    </div>
+            </div>
+
 
         </div>
-        <div class=" col-l-3">
+        <div class=" col-l-3 d-flex">
             
-            <button class="row" >ADS</button>
-            <button class="row"  >ADS</button>
+            <button  style="justify-content:center; align-items: flex-start;" >ADS</button>
+            <button  style="justify-content:center; align-items: flex-end;" >ADS</button>
 
         </div>
     </div>
 
-    <div class="row footer">
-
-
-    </div>
-
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-      
-
-
-    
-
-
-    
+    <div class="row footer"></div>
 
 
 </body>
