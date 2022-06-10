@@ -84,7 +84,6 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(state.trim());
         Product product = productService.getProduct(id);
 
-
         request.setAttribute("product",  product);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/editProduct.jsp");
@@ -109,12 +108,13 @@ public class ProductServlet extends HttpServlet {
 
     private void updateProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(  request.getParameter("id").trim() );
+
         String ten = request.getParameter("ten");
         double price = Double.parseDouble(  request.getParameter("price").trim() );
         String mota = request.getParameter("mota");
         String origin = request.getParameter("origin");
 
-        productService.editProduct( id, ten, price,mota,  origin  );
+        productService.editProduct( id, ten, price, mota,  origin  );
     }
 
 
@@ -127,7 +127,6 @@ public class ProductServlet extends HttpServlet {
         System.out.println(ten + price + origin);
         System.out.println(ten + price + origin);
         System.out.println(ten + price + origin); System.out.println(ten + price + origin);
-
 
 
         productService.addProduct( id, ten, price,mota,  origin  );

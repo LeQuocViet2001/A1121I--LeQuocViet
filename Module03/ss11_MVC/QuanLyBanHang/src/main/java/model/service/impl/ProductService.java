@@ -38,7 +38,7 @@ public class ProductService  implements IProductService {
 
     @Override
     public void addProduct(int id, String ten, double price, String mota, String origin) {
-
+            respository.addProduct( id, ten, price,mota,  origin);
     }
 
 }

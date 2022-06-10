@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping>
+          <factory-entry name="caseStudy_Furama" value="21050f02-61c0-4963-a3d4-93a05c6df1c7" />
+        </datasource-mapping>
+        <naming-strategy-map>
+          <unit-entry name="caseStudy_Furama" />
+        </naming-strategy-map>
+      </configuration>
+    </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
+  </component>
+</module>
