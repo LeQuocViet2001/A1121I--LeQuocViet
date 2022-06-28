@@ -43,6 +43,7 @@ public class CustomerRepository implements ICustomerRepository {
         return list;
     }
 
+
     @Override
     public boolean addCustomer(Customer customer) {
         String sql = "INSERT INTO `customer` (`customer_type_id`, `customer_name`, `customer_birthday`," +

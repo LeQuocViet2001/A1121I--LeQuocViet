@@ -29,7 +29,6 @@ public class ServiceServlet extends HttpServlet {
     private IServiceDAO_Service iServiceDAO_service = new ServiceDAO_Service();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         String  action = request.getParameter("action");
         if( action == null)
             action = "";

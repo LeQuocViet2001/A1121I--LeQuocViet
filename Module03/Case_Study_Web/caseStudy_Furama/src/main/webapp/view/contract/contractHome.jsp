@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+
+
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap4.min.css" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
@@ -55,15 +59,15 @@
 
 <div class="row content" style="    margin-right: 0px; margin-left: 0px;">
     <div class="row content container-fluid ">
-        <div class="col-lg-2 left">
+        <div class="col-lg-1 left">
             <div class="vertical-menu">
 
                 <a class="dropdown-item" href="/contract?action=add">New Contract</a>
             </div>
         </div>
-        <div class="col-lg-10 tableContent "  style=" display: block;  overflow: auto; ">
+        <div class="col-lg-11 tableContent "  style=" display: block;  overflow: auto; ">
             <%--  table list--%>
-            <table  class="  table table-striped table-bordered    "  >
+            <table id="tablePhanTrang"  class="  table table-striped table-bordered    "  >
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">stt</th>
@@ -97,14 +101,23 @@
                                 <a href="/contract?action=addDetail&id=${  c.getContract_id() }"><button    class="btn btn-outline-info" >
                                     Add Detail
                                 </button></a>
-
                             </td>
-
                         </tr>
                     </c:forEach>
                 </c:if>
                 </tbody>
             </table>
+                <script src="datatables/js/jquery.dataTables.min.js"></script>
+                <script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('#tablePhanTrang').dataTable( {
+                            "dom": 'lrtip',
+                            "lengthChange": false,
+                            "pageLength": 5
+                        } );
+                    } );
+                </script>
         </div>
     </div>
 </div>

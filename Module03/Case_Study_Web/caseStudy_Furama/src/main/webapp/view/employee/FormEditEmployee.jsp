@@ -50,7 +50,7 @@
     </style>
 </head>
 <body >
-<h1 style="margin-top: 30px; font-family: 'Baskerville Old Face'; text-align: center; font-size: 50px">Create Employee</h1>
+<h1 style="margin-top: 30px; font-family: 'Baskerville Old Face'; text-align: center; font-size: 50px">Edit Employee</h1>
 <form method="post" action="/employee?action=edit  " style="margin-left: 150px; margin-right: 150px">
 
     <div class="form-row">

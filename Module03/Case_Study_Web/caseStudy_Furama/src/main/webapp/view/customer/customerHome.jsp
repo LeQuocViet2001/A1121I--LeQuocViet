@@ -1,11 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
+
+    <link rel="stylesheet" href="datatables/css/dataTables.bootstrap4.min.css" />
+    <%--    <link rel="stylesheet" href="/css/homeWeb.css">--%>
+    <link rel="stylesheet" type="text/css" href="css/homeWeb.css" >
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css" >
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
@@ -15,16 +22,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
             crossorigin="anonymous"></script>
-<%--    <link rel="stylesheet" href="/css/homeWeb.css">--%>
-    <link rel="stylesheet" type="text/css" href="css/homeWeb.css" >
-    <link rel="stylesheet" type="text/css" href="css/sidebar.css" >
+
 <%--    <link rel="stylesheet" href="/css/sidebar.css">--%>
 
     <style>
         .content{
             width: 100vw;
             height: 85vh;
-            border-radius: 1px;
             margin-left: 0px;
             margin-right: 0px;
             padding-left: 0px;
@@ -53,22 +57,22 @@
 <body>
             <%@ include file="/view/teamplate.jsp"%>
 
-        <div class="row content" style="    margin-right: 0px; margin-left: 0px;">
+            <div class="row content" style="    margin-right: 0px; margin-left: 0px;">
             <div class="row content container-fluid ">
-                <div class="col-lg-2 left">
+                <div class="col-lg-1 left">
                     <div class="vertical-menu">
 
                         <a class="dropdown-item" href="/customer?action=add">New Customer</a>
                     </div>
                 </div>
-                <div class="col-lg-10 tableContent "  style=" display: block;  overflow: auto; ">
 
-                    <%--  table list--%>
-                    <div class="row col-lg-12">
+                <div class="col-lg-11 tableContent "  style=" display: block;  overflow: auto; ">
+
+                    <div class="row col-lg-12 ">
                         <form action="/customer?action=search" method="post">
                         <label>Ten:</label> <input type="text"  name="searchName"  width="200px">
 
-                        <label>ngay sinh:</label> <input type="date" name="searchBirtday " width="200px">
+                        <label>ngay sinh:</label> <input  name="searchBirtday ">
 
                         <label> Loai Khach Hang</label>
                             <select name="searchType_id"  width="200px">
@@ -81,8 +85,12 @@
                             <input type="submit" value="OK ">
                         </form>
                     </div>
-                    <div class="row col-lg-12">
-                            <table  class="  table table-striped table-bordered    "  >
+                    <div class="row col-lg-12 "  style="
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-left: 0px;">
+                            <table id="tablePhanTrang"  class="  table table-striped table-bordered  table-responsive  "  >
                                 <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">STT</th>
@@ -118,9 +126,7 @@
                                             <td > ${   cus.getCustomer_email() }    </td>
                                             <td > ${   cus.getCustomer_address() }    </td>
 
-
                                             <td>
-                                                    <%--                                        <form method="get" action="/nhanvien?action=edit" >--%>
                                                 <c:if test="${sessionScope.user == null}">
                                                     <button type="button" id="btnEdit" class="btn btn-outline-info" data-toggle="modal"  data-target="#modelFail">
                                                         Edit
@@ -145,10 +151,23 @@
                                 </c:if>
                                 </tbody>
                             </table>
+                        <script src="datatables/js/jquery.dataTables.min.js"></script>
+                        <script src="datatables/js/dataTables.bootstrap4.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                $('#tablePhanTrang').dataTable( {
+                                    "dom": 'lrtip',
+                                    "lengthChange": false,
+                                    "pageLength": 5
+                                } );
+                            } );
+                        </script>
                     </div>
 
                 </div>
             </div>
         </div>
+
+
 </body>
 </html>

@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -145,7 +146,15 @@ public class CustomerServlet extends HttpServlet {
         String customer_email = request.getParameter("customer_email");
         String customer_address = request.getParameter("customer_address");
         Customer customer = new Customer(0 , customer_type_id, customer_name,customer_birthday, customer_gender,customer_id_card,customer_phone,customer_email,customer_address);
-            iCustomerService.addCustomer(customer);
+
+
+        HttpSession session = request.getSession();
+        if(    iCustomerService.addCustomer(customer) == true){
+            session.setAttribute("msgSucces"," them thanh cong");
+        }
+        else{
+            session.setAttribute("msgFail"," them That bai");
+        }
 
     }
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
@@ -160,7 +169,15 @@ public class CustomerServlet extends HttpServlet {
         String customer_email = request.getParameter("customer_email");
         String customer_address = request.getParameter("customer_address");
         Customer customer = new Customer(customer_id , customer_type_id, customer_name,customer_birthday, customer_gender,customer_id_card,customer_phone,customer_email,customer_address);
-        iCustomerService.editCustomer(customer);
+
+
+        HttpSession session = request.getSession();
+        if( iCustomerService.editCustomer(customer) == true){
+            session.setAttribute("msgSucces"," sua thanh cong");
+        }
+        else{
+            session.setAttribute("msgFail"," sua That bai");
+        }
     }
 
 }

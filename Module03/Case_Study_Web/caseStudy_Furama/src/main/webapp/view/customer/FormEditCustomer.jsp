@@ -109,8 +109,6 @@
                     <c:if test="${ customer.getCustomer_type_id()  !=  customerType.getCustomerTypeId()}">
                         <option   value="${customerType.getCustomerTypeId()}">  ${customerType.getCustomerTypeName()} </option>
                     </c:if>
-
-
                 </c:forEach>
             </select>
         </div>

@@ -74,10 +74,10 @@ public class EmployeeServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
         if( iEmployeeServiee.editEmployee(employee)){
-            session.setAttribute("msgSucces"," Them thanh cong");
+            session.setAttribute("msgSucces"," Sua thanh cong");
         }
         else{
-            session.setAttribute("msgFail"," Them That bai");
+            session.setAttribute("msgFail"," Sua That bai");
         }
 //        String username = request.getParameter("username");
 //        String password = request.getParameter("password");
@@ -143,6 +143,9 @@ public class EmployeeServlet extends HttpServlet {
                     default:{
                         List<Employee> employeeList = iEmployeeServiee.getAllListEmployee();
                         request.setAttribute("employeeList",employeeList);
+                        request.setAttribute("educationDegreeList", educationDegreeList);
+                        request.setAttribute("positionList", positionList);
+                        request.setAttribute("divisionList", divisionList);
                         RequestDispatcher dispatcher = request.getRequestDispatcher("view/employee/employeeHome.jsp");
                         dispatcher.forward(request,response);
                     }
