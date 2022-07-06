@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Them moi </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"></script>
+    <%--    <link rel="stylesheet" href="/css/homeWeb.css">--%>
+    <link rel="stylesheet" type="text/css" href="css/homeWeb.css" >
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css" >
+    <%--    <link rel="stylesheet" href="/css/sidebar.css">--%>
+
+    <style>
+        .content{
+            width: 100vw;
+            height: 75vh;
+            border-radius: 1px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+
+        }
+
+        .left {
+            margin-right: 0px;
+            margin-left: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+
+        }
+
+        .tableContent{
+            margin-right: 0px;
+            margin-left: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+    </style>
+</head>
+<body >
+<h1 style="margin-top: 30px; font-family: 'Baskerville Old Face'; text-align: center; font-size: 50px">Create Musix</h1>
+<form method="post" th:action="@{/create}" th:object="${music}" style="margin-left: 150px; margin-right: 150px"  enctype="multipart/form-data">
+
+
+    <div class="form-row">
+
+        <div class="col-md-6 mb-4">
+            <label >Id </label>
+            <input   type="text" class="form-control" th:field="*{id}"    required>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <label >Name Music</label>
+            <input   type="text" class="form-control" th:field="*{name}"    required>
+        </div>
+<!--        https://youtu.be/jO2vrSXVDo0-->
+        <div class="col-md-6 mb-4">
+            <label >Link Embeb Url</label>
+            <input type="file" id="i_file" name="files"  class="form-control"  th:text="*{urlFile}"  onchange="readURL(this);"  accept="audio/*" required>
+<!--            <input   type="text" class="form-control"   th:field="*{urlFile}"  required>-->
+<!--            <div  hidden id="disp_tmp_path"></div>-->
+        </div>
+
+<!--        <script>-->
+<!--            function readURL(input) {-->
+<!--                if (input.files && input.files[0]) {-->
+<!--                    var reader = new FileReader();-->
+<!--                    reader.onload = function (e) {-->
+<!--                        $('#blah')-->
+<!--                            .attr('src', e.target.result)-->
+<!--                            .width(150)-->
+<!--                            .height(200);-->
+<!--                    };-->
+<!--                    reader.readAsDataURL(input.files[0]);-->
+<!--                }-->
+<!--            }-->
+<!--        </script>-->
+
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" onclick="window.history.back();">Cancel</button>
+
+</form>
+</body>
+</html>>

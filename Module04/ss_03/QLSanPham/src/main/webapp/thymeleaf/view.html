@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Chi tiet</h1>
+<h1>Student detail</h1>
+<table border="1" th:object="${product}">
+    <tr>
+        <td>ID</td>
+        <td th:text="*{id}"></td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td th:text="*{name}"></td>
+    </tr>
+
+    <tr>
+        <td>Price</td>
+        <td><input type="number" th:field="*{price}"></td>
+    </tr>
+
+    <tr>
+        <td>ExpiryDate</td>
+        <td><input type="date" th:field="*{expiryDate}"></td>
+    </tr>
+
+    <tr>
+        <td>Country</td>
+        <td><input type="text" th:field="*{country}"></td>
+    </tr>
+
+
+    <tr>
+        <td>Status</td>
+        <td>
+            <input type="radio" th:field="*{status}" th:value="true" id="male" th:selected="*{status}"  >
+            <label  for="male"> Sold on</label>
+
+            <input type="radio" th:field="*{status}" th:value="false" id="female" th:selected="*{!status}" >
+            <label  for="female"> Sold Out </label>
+        </td>
+    </tr>
+
+
+</tr>
+</table>
+<a th:href="@{/product/list/}">Back to list</a>
+</body>
+</html>
