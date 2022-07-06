@@ -54,7 +54,7 @@ public class MusicController {
 //        MultipartFile multipartFile = files[0];
         String fileName = files[0].getOriginalFilename();
         try {
-            FileCopyUtils.copy( files[0].getBytes(), new File(fileUpload + fileName.trim()));
+            FileCopyUtils.copy( files[0].getBytes(), new File( fileUpload + fileName.trim()));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
