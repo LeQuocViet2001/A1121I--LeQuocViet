@@ -5,6 +5,7 @@ import com.vn.entity.Blog;
 import com.vn.service.BlogService;
 import com.vn.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,14 +18,16 @@ import java.util.List;
 public class BlogController {
 
     @Autowired
-    private BlogService service;
+//    @Qualifier("blogService")
+    private BlogService blogService;
     @Autowired
+//    @Qualifier("categoryService")
     private CategoryService categoryService;
 
 
     @GetMapping("/home")
     public String showHome(Model model){
-        model.addAttribute("blogs", service.findAll());
+        model.addAttribute("blogs", blogService.findAll());
         model.addAttribute("cate", categoryService.getAllCategory());
         return "home";
     }
@@ -38,20 +41,20 @@ public class BlogController {
 
     @PostMapping("/create")
     public  String create(@ModelAttribute(value = "blog") Blog blog, Model model){
-        service.create(blog);
+        blogService.create(blog);
         return "redirect:/blogs/home";
     }
 
     @PostMapping("/delete")
     public  String deleteCate(@RequestParam(value = "idDelete") String idDelete , Model model){
 
-        service.delete(idDelete);
+        blogService.delete(idDelete);
         return "redirect:/blogs/home";
     }
 
     @GetMapping("/detail")
     public  String showDetail(@RequestParam(value = "id") String id, Model model){
-        Blog blog = service.findById(id);
+        Blog blog = blogService.findById(id);
         model.addAttribute("blog", blog);
         model.addAttribute("themes", categoryService.getAllCategory());
         return "update";
@@ -59,20 +62,20 @@ public class BlogController {
 
     @PostMapping("/edit")
     public  String edit(@ModelAttribute(value = "blog") Blog blog){
-        service.update(blog);
+        blogService.update(blog);
         return "redirect:/blogs/home";
     }
 
     @PostMapping("/search")
     public String search(@RequestParam(value = "search") String search, Model model){
 
-        List<Blog> list = service.findAll();
-        List<Blog> blogs = new ArrayList<>();
-        for ( Blog l: list ) {
-            if(  l.getTitle().contains( search.trim()  ) ){
-                blogs.add(l);
-            }
-        }
+        List<Blog> blogs = blogService.getListSearch( search);
+//        List<Blog> blogs = new ArrayList<>();
+//        for ( Blog l: list ) {
+//            if(  l.getTitle().contains( search.trim()  ) ){
+//                blogs.add(l);
+//            }
+//        }
         model.addAttribute("blogs",blogs );
         model.addAttribute("search",search );
         return "home";

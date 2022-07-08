@@ -157,8 +157,8 @@
                         Catagoties
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownList">
-                        <a class="dropdown-item" th:href="@{/categoty/list}" > Danh sach</a>
-                        <a class="dropdown-item" th:href="#{/categoty/create}">Thêm Danh Mục</a>
+                        <a class="dropdown-item" th:href="@{/category/list}" > Danh sach</a>
+                        <a class="dropdown-item" th:href="@{/category/create}">Thêm Danh Mục</a>
 
 <!--                        <div class="dropdown-divider"></div>-->
 <!--                        <a class="dropdown-item" href="#">fsdfe</a>-->
@@ -188,11 +188,16 @@
                         <h3  th:text="${o.title}"  class="card-title">  </h3>
 
                         <span style="display: inline; font-size: 18px; color: grey; font-style: italic ; text-align: left; margin-left: 3px"  >Category:
-                        <th:block th:each="ca: ${cate}" >
-                            <span     th:if="${ca.idTheme== o.category.idTheme}" th:text="${ca.nameTheme}" class=" theme card-subtitle mb-2 text-muted ml-2 "     >  </span>
-                        </th:block>
+                            <span     th:text="${o.category.getNameTheme()}" class=" theme card-subtitle mb-2 text-muted ml-2 "     >  </span>
                             <span style="float: right; margin-right: 3px" th:text="${o.dateWrite}"></span>
                         </span>
+
+<!--                        <span style="display: inline; font-size: 18px; color: grey; font-style: italic ; text-align: left; margin-left: 3px"  >Category:-->
+<!--                        <th:block th:each="ca: ${cate}" >-->
+<!--                            <span     th:if="${ca.idTheme== o.category.idTheme}" th:text="${ca.nameTheme}" class=" theme card-subtitle mb-2 text-muted ml-2 "     >  </span>-->
+<!--                        </th:block>-->
+<!--                            <span style="float: right; margin-right: 3px" th:text="${o.dateWrite}"></span>-->
+<!--                        </span>-->
 
 
                         <div class="card-body" style="height: 100px; width: 100%;  display:block; margin: 0 ">

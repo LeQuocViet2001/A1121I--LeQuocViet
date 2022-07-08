@@ -5,6 +5,7 @@ import com.vn.entity.Category;
 import com.vn.service.BlogService;
 import com.vn.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/categoty")
+@RequestMapping("/category")
 public class CategoryController {
+
     @Autowired
+//    @Qualifier("categoryService")
     private CategoryService categoryService;
-    @Autowired
-    private BlogService blogService;
+//    @Autowired
+//    private BlogService blogService;
 
     @GetMapping("/list")
     public String getAll(Model model){
@@ -30,7 +33,7 @@ public class CategoryController {
     public  String deleteCate(@RequestParam(value = "idDelete") String idDelete , Model model){
 
         categoryService.delete(idDelete);
-        return "redirect:/categoty/list";
+        return "redirect:/category/list";
     }
 
     @GetMapping("/create")
@@ -40,10 +43,10 @@ public class CategoryController {
     }
 
     @PostMapping("/create")
-    public String create(@RequestAttribute(value = "category") Category category, Model model)
+    public String create(@ModelAttribute(value = "category") Category category, Model model)
     {
         categoryService.create(category);
-        return "redirect:/categoty/list";
+        return "redirect:/category/list";
 
     }
 

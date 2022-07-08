@@ -13,9 +13,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/product")
 public class ProductController {
+
     @Autowired
     private ProductService service;
-
 
 
     @GetMapping("/list")
@@ -50,6 +50,12 @@ public class ProductController {
     public  String deleteByid(@RequestParam("id") String id, Model model)
     {
         service.delete( Integer.parseInt(id) );
+        return "redirect:/product/list";
+    }
+
+    @PostMapping("/update")
+    public String update(@ModelAttribute("product") Product product){
+        service.update(product);
         return "redirect:/product/list";
     }
 

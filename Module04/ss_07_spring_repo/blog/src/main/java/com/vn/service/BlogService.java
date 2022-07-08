@@ -2,9 +2,11 @@ package com.vn.service;
 
 import com.vn.entity.Blog;
 import com.vn.entity.Category;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//@Service("blogService")
 public interface BlogService {
 
 
@@ -14,4 +16,5 @@ public interface BlogService {
     List<Blog> findAll();
     Blog findById(String id);
 
+    List<Blog> getListSearch(String search);
 }

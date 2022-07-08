@@ -1,37 +1,38 @@
 package com.vn.service;
 
 import com.vn.entity.Blog;
-import com.vn.entity.Category;
-import com.vn.repository.BlogRepositoty;
+import com.vn.repository.BlogRepositoryJpa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 
+//@Service("blogService")
 @Service
 public class BlogServiceImpl implements  BlogService{
 
-    private BlogRepositoty blogRepositoty;
     @Autowired
-    public BlogServiceImpl(  BlogRepositoty blogRepositoty){
-        this.blogRepositoty = blogRepositoty;
-    }
+    private BlogRepositoryJpa blogRepositoty;
+//    @Autowired
+////    public BlogServiceImpl(  BlogRepositoryJpa blogRepositoty){
+//        this.blogRepositoty = blogRepositoty;
+//    }
 
 
     @Override
     public void create(Blog blog) {
-        blogRepositoty.create(blog);
+        blogRepositoty.save(blog);
     }
 
     @Override
     public void update(Blog blog) {
-        blogRepositoty.update( blog);
+        blogRepositoty.save( blog);
     }
 
     @Override
     public void delete(String id) {
-        blogRepositoty.delete(id);
+        blogRepositoty.delete( findById(id));
     }
 
     @Override
@@ -41,7 +42,12 @@ public class BlogServiceImpl implements  BlogService{
 
     @Override
     public Blog findById(String id) {
-        return blogRepositoty.findById(id);
+        return blogRepositoty.findById( Integer.parseInt(id) ).orElse(null);
+    }
+
+    @Override
+    public List<Blog> getListSearch(String search) {
+        return blogRepositoty.getListSearch(search);
     }
 
 

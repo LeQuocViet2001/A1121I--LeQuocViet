@@ -21,7 +21,6 @@ public class Product {
     }
 
 
-
     public Product(int id, String name, boolean status, String expiryDate, double price, String country) {
         this.id = id;
         this.name = name;

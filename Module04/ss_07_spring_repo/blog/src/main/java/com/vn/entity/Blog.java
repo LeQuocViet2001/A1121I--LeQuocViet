@@ -14,10 +14,10 @@ public class Blog {
     private String title;
     @Column( columnDefinition = "text")
     private String content;
-    @Column
+    @Column(columnDefinition = " date  ")
     private String dateWrite;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "idTheme")
     private Category category;
 
