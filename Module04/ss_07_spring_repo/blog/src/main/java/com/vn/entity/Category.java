@@ -11,12 +11,12 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(  columnDefinition = " int  ")
+    @Column(columnDefinition = " int  ")
     private int idTheme;
     private String nameTheme;
 
-    @OneToMany( cascade=CascadeType.ALL,
-              mappedBy= "category")
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy = "category")
 //    @OneToMany(
 //        cascade = CascadeType.ALL
 //    )
@@ -58,6 +58,6 @@ public class Category {
 
     @Override
     public String toString() {
-        return  nameTheme;
+        return nameTheme;
     }
 }

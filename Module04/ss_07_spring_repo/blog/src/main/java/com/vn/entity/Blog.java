@@ -4,7 +4,7 @@ package com.vn.entity;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "blogs")
+@Table(name = "blogs")
 public class Blog {
 
     @Id
@@ -12,7 +12,7 @@ public class Blog {
     @Column(columnDefinition = " int  ")
     private int id;
     private String title;
-    @Column( columnDefinition = "text")
+    @Column(columnDefinition = "text")
     private String content;
     @Column(columnDefinition = " date  ")
     private String dateWrite;
@@ -30,13 +30,13 @@ public class Blog {
     }
 
 
-
     public Blog() {
     }
 
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -71,8 +71,6 @@ public class Blog {
         this.content = content;
         this.dateWrite = dateWrite;
     }
-
-
 
 
 }

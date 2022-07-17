@@ -10,7 +10,7 @@ import java.util.List;
 
 //@Service("blogService")
 @Service
-public class BlogServiceImpl implements  BlogService{
+public class BlogServiceImpl implements BlogService {
 
     @Autowired
     private BlogRepositoryJpa blogRepositoty;
@@ -27,12 +27,12 @@ public class BlogServiceImpl implements  BlogService{
 
     @Override
     public void update(Blog blog) {
-        blogRepositoty.save( blog);
+        blogRepositoty.save(blog);
     }
 
     @Override
     public void delete(String id) {
-        blogRepositoty.delete( findById(id));
+        blogRepositoty.delete(findById(id));
     }
 
     @Override
@@ -42,7 +42,7 @@ public class BlogServiceImpl implements  BlogService{
 
     @Override
     public Blog findById(String id) {
-        return blogRepositoty.findById( Integer.parseInt(id) ).orElse(null);
+        return blogRepositoty.findById(Integer.parseInt(id)).orElse(null);
     }
 
     @Override

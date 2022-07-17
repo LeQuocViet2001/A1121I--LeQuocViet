@@ -6,11 +6,18 @@ import com.vn.service.BlogService;
 import com.vn.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 @Controller
 @RequestMapping("/category")
@@ -22,34 +29,73 @@ public class CategoryController {
 //    @Autowired
 //    private BlogService blogService;
 
+//    @GetMapping("/list")
+//    public String getAll(Model model){
+//     List<Category> categories =  categoryService.getAllCategory();
+//    model.addAttribute("categories", categories );
+//    return "categoryList";
+//    }
+
+
+//    @GetMapping("/list")
+//    public String getAll( Model model,  @RequestParam("page") Optional<Integer> page,
+//                          @RequestParam("size") Optional<Integer> size) {
+//        int currentPage = page.orElse(1);
+//        int pageSize = size.orElse(2);
+//        Page<Category> categories = categoryService.findAllPage( PageRequest.of(currentPage - 1, pageSize));
+//        model.addAttribute("categories", categories);
+//        if (categories.getTotalPages() > 1) {
+//            List<Integer> pageNumbers = IntStream.rangeClosed(1, categories.getTotalPages())
+//                    .boxed()
+//                    .collect(Collectors.toList());
+//            model.addAttribute("pageNumbers", pageNumbers);
+//        }
+//        return "categoryList";
+//    }
+
     @GetMapping("/list")
-    public String getAll(Model model){
-     List<Category> categories =  categoryService.getAllCategory();
-    model.addAttribute("categories", categories );
-    return "categoryList";
+    public String getAll( Model model,  @RequestParam(value = "page") Optional<Integer>  page ) {
+        int currentPage = page.orElse(1);
+        int pageSize =  1;
+        Page<Category> categories = categoryService.findAllPage( PageRequest.of(currentPage - 1, pageSize));
+
+        int totalItems = categories.getNumberOfElements();
+        int totalPages = categories.getTotalPages();
+
+
+        model.addAttribute("categories", categories);
+        model.addAttribute("totalItems", totalItems);
+        model.addAttribute("totalPages", totalPages);
+        model.addAttribute("currentPage", currentPage);
+
+//        if (categories.getTotalPages() > 1) {
+//            List<Integer> pageNumbers = IntStream.rangeClosed(1, categories.getTotalPages())
+//                    .boxed()
+//                    .collect(Collectors.toList());
+//            model.addAttribute("pageNumbers", pageNumbers);
+//        }
+        return "categoryList";
     }
 
     @PostMapping("/delete")
-    public  String deleteCate(@RequestParam(value = "idDelete") String idDelete , Model model){
+    public String deleteCate(@RequestParam(value = "idDelete") String idDelete, Model model) {
 
         categoryService.delete(idDelete);
         return "redirect:/category/list";
     }
 
     @GetMapping("/create")
-    public String showFormCreate(Model model){
+    public String showFormCreate(Model model) {
         model.addAttribute("category", new Category());
         return "createCategory";
     }
 
     @PostMapping("/create")
-    public String create(@ModelAttribute(value = "category") Category category, Model model)
-    {
+    public String create(@ModelAttribute(value = "category") Category category, Model model) {
         categoryService.create(category);
         return "redirect:/category/list";
 
     }
-
 
 
 }

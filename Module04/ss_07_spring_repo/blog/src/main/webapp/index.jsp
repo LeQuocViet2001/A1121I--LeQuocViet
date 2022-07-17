@@ -8,11 +8,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>$Title$</title>
-  </head>
-  <body>
+</head>
+<body>
 
-  <c:redirect url="/blogs/home"></c:redirect>
-  </body>
+<c:redirect url="/blogs/home"></c:redirect>
+</body>
 </html>

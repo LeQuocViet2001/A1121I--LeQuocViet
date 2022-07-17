@@ -3,6 +3,9 @@ package com.vn.service;
 import com.vn.entity.Category;
 import com.vn.repository.CategoryRepositoryJpa;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +23,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void create(Category category) {
-            categotyRepository.save(category);
+        categotyRepository.save(category);
     }
 
     @Override
@@ -30,12 +33,24 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void delete(String id) {
-    categotyRepository.delete( categotyRepository.findById( Integer.parseInt(id)).orElse(null));
+        categotyRepository.delete(categotyRepository.findById(Integer.parseInt(id)).orElse(null));
     }
 
     @Override
     public List<Category> getAllCategory() {
         return categotyRepository.findAll();
     }
+
+    @Override
+    public Page<Category> findAllPage(Pageable pageable) {
+        return categotyRepository.findAll(pageable);
+
+    }
+
+
+//    @Override
+//    public Page<Category> findAllPage(Pageable pageable) {
+//        return categotyRepository.findAll( pageable);
+//    }
 
 }

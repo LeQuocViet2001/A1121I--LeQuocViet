@@ -26,34 +26,34 @@ public class BlogController {
 
 
     @GetMapping("/home")
-    public String showHome(Model model){
+    public String showHome(Model model) {
         model.addAttribute("blogs", blogService.findAll());
         model.addAttribute("cate", categoryService.getAllCategory());
         return "home";
     }
 
     @GetMapping("/create")
-    public String showFormCrate(Model model){
+    public String showFormCrate(Model model) {
         model.addAttribute("blog", new Blog());
         model.addAttribute("themes", categoryService.getAllCategory());
         return "create";
     }
 
     @PostMapping("/create")
-    public  String create(@ModelAttribute(value = "blog") Blog blog, Model model){
+    public String create(@ModelAttribute(value = "blog") Blog blog, Model model) {
         blogService.create(blog);
         return "redirect:/blogs/home";
     }
 
     @PostMapping("/delete")
-    public  String deleteCate(@RequestParam(value = "idDelete") String idDelete , Model model){
+    public String deleteCate(@RequestParam(value = "idDelete") String idDelete, Model model) {
 
         blogService.delete(idDelete);
         return "redirect:/blogs/home";
     }
 
     @GetMapping("/detail")
-    public  String showDetail(@RequestParam(value = "id") String id, Model model){
+    public String showDetail(@RequestParam(value = "id") String id, Model model) {
         Blog blog = blogService.findById(id);
         model.addAttribute("blog", blog);
         model.addAttribute("themes", categoryService.getAllCategory());
@@ -61,23 +61,23 @@ public class BlogController {
     }
 
     @PostMapping("/edit")
-    public  String edit(@ModelAttribute(value = "blog") Blog blog){
+    public String edit(@ModelAttribute(value = "blog") Blog blog) {
         blogService.update(blog);
         return "redirect:/blogs/home";
     }
 
     @PostMapping("/search")
-    public String search(@RequestParam(value = "search") String search, Model model){
+    public String search(@RequestParam(value = "search") String search, Model model) {
 
-        List<Blog> blogs = blogService.getListSearch( search);
+        List<Blog> blogs = blogService.getListSearch(search);
 //        List<Blog> blogs = new ArrayList<>();
 //        for ( Blog l: list ) {
 //            if(  l.getTitle().contains( search.trim()  ) ){
 //                blogs.add(l);
 //            }
 //        }
-        model.addAttribute("blogs",blogs );
-        model.addAttribute("search",search );
+        model.addAttribute("blogs", blogs);
+        model.addAttribute("search", search);
         return "home";
     }
 

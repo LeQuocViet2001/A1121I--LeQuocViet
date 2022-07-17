@@ -8,12 +8,11 @@ import org.springframework.stereotype.Repository;
 import javax.transaction.Transactional;
 import java.util.List;
 
-
+@Repository
 @Transactional
-public interface BlogRepositoryJpa  extends JpaRepository<Blog,Integer> {
+public interface BlogRepositoryJpa extends JpaRepository<Blog, Integer> {
 
-    @Query(  value = "select * from blogs"
-
+    @Query(value = "select * from blogs"
             , nativeQuery = true)
     List<Blog> getListSearch(String search);
 }

@@ -46,14 +46,15 @@
         }
 
 
-        .card-title{
-            width:100% ;
-            font-weight:bold;
+        .card-title {
+            width: 100%;
+            font-weight: bold;
             color: royalblue;
             margin-top: 6px;
             margin-bottom: 0px;
         }
-        .card-body{
+
+        .card-body {
             height: 100px;
             min-height: 80px;
             overflow-y: hidden;
@@ -63,13 +64,15 @@
         .exam-container {
             display: flex;
             /*background: #ab7bb0;*/
-            padding: 4px; }
+            padding: 4px;
+        }
+
         .exam-element {
             /*background-color: orangered;*/
             margin: 1px;
             /*color: white;*/
             min-height: 40px;
-            justify-content:center;
+            justify-content: center;
             display: flex;
             align-items: center;
         }
@@ -113,16 +116,16 @@
         }
 
 
-
     </style>
 </head>
-<body  >
+<body>
 
-<header >
+<header>
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
         <a class="navbar-brand" style="color: orange" th:href="@{/blogs/home}">My Blog</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -130,14 +133,15 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/blogs/create}" >Thêm </a>
+                    <a class="nav-link" th:href="@{/blogs/create}">Thêm </a>
                 </li>
                 <li class="nav-item dropdown" style="position: relative">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownList" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownList" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Catagoties
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownList">
-                        <a class="dropdown-item" th:href="@{/category/list}" > Danh sach</a>
+                        <a class="dropdown-item" th:href="@{/category/list}"> Danh sach</a>
                         <a class="dropdown-item" th:href="@{/category/create}">Thêm Danh Mục</a>
 
                         <!--                        <div class="dropdown-divider"></div>-->
@@ -151,40 +155,37 @@
 
 </header>
 
-<div style="margin-top: 30px" >
+<div style="margin-top: 30px">
     <h1> Danh sach danh muc</h1>
-    <table id="tablePhanTrang"  class="  table table-striped table-bordered    "  >
+    <table id="tablePhanTrang" class="  table table-striped table-bordered    ">
         <thead class="thead-dark">
         <tr>
-
             <th scope="col">Index</th>
             <th scope="col"> ID</th>
             <th scope="col">Name</th>
             <th scope="col">Count</th>
             <th scope="col">Delete</th>
-
         </tr>
         </thead>
         <tbody th:each="st, i: ${categories}">
         <tr th:object="${st}">
             <td th:text="${i.count}"></td>
-            <td th:text="*{idTheme}"> </td>
-            <td th:text="*{nameTheme}"> </td>
-            <td th:text="áda"> </td>
-
+            <td th:text="*{idTheme}"></td>
+            <td th:text="*{nameTheme}"></td>
+            <td th:text="áda"></td>
 
 
             <td>
-<!--                th:onclick="|showModelDelete(*{idTheme}| +','+ |*{nameTheme} )|"-->
+                <!--                th:onclick="|showModelDelete(*{idTheme}| +','+ |*{nameTheme} )|"-->
 
                 <button type="button"
                         th:onclick="showModelDelete( [[${i.current.idTheme}]] ,[[ ${i.current.nameTheme}]])"
 
                         class="btn btn-outline-danger" data-toggle="modal"
                         data-target="#modalDelete">
-                Xóa
+                    Xóa
                 </button>
-<!--                <a th:href="@{/categoty/delete(id=*{ id })}"   style="color:red;" > x </a>-->
+                <!--                <a th:href="@{/categoty/delete(id=*{ id })}"   style="color:red;" > x </a>-->
             </td>
         </tr>
         <!--    </c:forEach>-->
@@ -193,11 +194,73 @@
     </table>
 
 
+    <!--    <div>-->
+    <!--        <a th:if="${categories.hasPrevious()}"-->
+    <!--           th:href="@{'/category/list'(page=${categories.number - 1})}"> Previous  </a>-->
+    <!--        <span th:text="${categories.number +1 }"></span>/<span th:text="${categories.totalPages}"></span>-->
+    <!--        <a th:if="${categories.hasNext()}"-->
+    <!--           th:href="@{'/category/list'(page=${categories.number + 1})}"> Next  </a>-->
+
+    <!--    </div>-->
+    <div th:if=" ${currentPage}"></div>
+
+<!--    <div th:if="${ categories.totalPages  > 0}">-->
+<!--        <div class="row  ">-->
+<!--            <div class="col-sm-2">-->
+<!--                Total Rows: [[${totalItems}]] - Page [[${currentPage}]]  of [[${totalPages}]]-->
+<!--            </div>-->
+<!--            <div class="col-sm-1">-->
+<!--                <a th:if="${ categories.hasPrevious()}" th:href="@{/category/list(page=1)}"> First</a>-->
+<!--&lt;!&ndash;                <span th:unless="${currentPage >1}" ></span>&ndash;&gt;-->
+<!--            </div>-->
+
+<!--            <div class="col-sm-7">-->
+<!--                <span th:each="i: ${#numbers.sequence(1, categories.totalPages)} ">-->
+<!--                    <a th:if="${ currentPage != i }" th:href="@{/category/list(page=${i})}"> [[${i}]]</a>-->
+<!--&lt;!&ndash;                    <span th:unless="${categories.number != i}"> [[${i}]]</span>  &nbsp;&nbsp;&ndash;&gt;-->
+<!--                </span>-->
+<!--            </div>-->
+
+<!--            <div class="col-sm-2">-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
 
-    <div class="modal fade" id="modalDelete" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <nav aria-label="Pagination" th:if="${categories.totalPages > 0}">
+            <ul class="pagination justify-content-center font-weight-bold">
+                <li class="page-item" th:classappend="${categories.number eq 0} ? 'disabled'">
+                    <a class="page-link"
+                       th:href="@{/category/list(page=${categories.number lt 2 ? 1 : categories.number}) } "
+                       aria-label="Previous" title="Previous Page" data-toggle="tooltip">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <li class="page-item" th:classappend="${i eq categories.number + 1} ? 'active'"
+                    th:each="i : ${#numbers.sequence( 1, categories.totalPages, 1)}">
+                    <a class="page-link"
+                       th:href="@{/category/list(page=${i}) }" th:text="${i}"z
+                       th:title="${'Page '+ i}" data-toggle="tooltip"></a>
+                </li>
+
+
+                <li class="page-item" th:classappend="${categories.number + 1 eq categories.totalPages} ? 'disabled'">
+                    <a class="page-link"
+                       th:href="@{/category/list(page=${categories.number + 2})}"
+                       aria-label="Next" title="Next Page" data-toggle="tooltip">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+    <div class="modal fade" id="modalDelete" data-backdrop="static" data-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <form  method="post"  th:action="@{/categoty/delete}"  id="modelForm"    >
+            <form method="post" th:action="@{/categoty/delete}" id="modelForm">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Thong Bao</h5>
@@ -205,10 +268,8 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
-
                     <div class="modal-body">
-                        <input  hidden type="text" id="idDelete"  name="idDelete">
+                        <input hidden type="text" id="idDelete" name="idDelete">
                         <span>Ban co muon xoa </span>
                         <span class="text-danger" id="nameDelete"></span> khong?<span/>
                     </div>
@@ -222,16 +283,13 @@
         </div>
     </div>
     <script>
-        function showModelDelete(id,name) {
-            document.getElementById("idDelete"). value= id;
-            document.getElementById("nameDelete").innerText =name;
+        function showModelDelete(id, name) {
+            document.getElementById("idDelete").value = id;
+            document.getElementById("nameDelete").innerText = name;
             // document.getElementById("modelForm").method = "post";
 
         }
     </script>
-
-
-
 
 
 </div>
