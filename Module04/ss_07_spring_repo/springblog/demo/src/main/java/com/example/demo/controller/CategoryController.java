@@ -33,8 +33,8 @@ public class CategoryController {
 
     @GetMapping("/list")
     public String getAll( Model model,  @RequestParam(value = "page") Optional<Integer> page ) {
-        int currentPage = page.orElse(5);
-        int pageSize =  1;
+        int currentPage = page.orElse(1);
+        int pageSize =  5;
         Page<Category> categories = categoryService.findAllPage( PageRequest.of(currentPage - 1, pageSize));
 
         int totalItems = categories.getNumberOfElements();

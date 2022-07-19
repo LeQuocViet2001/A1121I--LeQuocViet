@@ -26,54 +26,24 @@ public class CategoryController {
     @Autowired
 //    @Qualifier("categoryService")
     private CategoryService categoryService;
-//    @Autowired
-//    private BlogService blogService;
-
-//    @GetMapping("/list")
-//    public String getAll(Model model){
-//     List<Category> categories =  categoryService.getAllCategory();
-//    model.addAttribute("categories", categories );
-//    return "categoryList";
-//    }
 
 
-//    @GetMapping("/list")
-//    public String getAll( Model model,  @RequestParam("page") Optional<Integer> page,
-//                          @RequestParam("size") Optional<Integer> size) {
-//        int currentPage = page.orElse(1);
-//        int pageSize = size.orElse(2);
-//        Page<Category> categories = categoryService.findAllPage( PageRequest.of(currentPage - 1, pageSize));
-//        model.addAttribute("categories", categories);
-//        if (categories.getTotalPages() > 1) {
-//            List<Integer> pageNumbers = IntStream.rangeClosed(1, categories.getTotalPages())
-//                    .boxed()
-//                    .collect(Collectors.toList());
-//            model.addAttribute("pageNumbers", pageNumbers);
-//        }
-//        return "categoryList";
-//    }
 
+
+///////////////Controler tạo phân trang
     @GetMapping("/list")
     public String getAll( Model model,  @RequestParam(value = "page") Optional<Integer>  page ) {
         int currentPage = page.orElse(1);
-        int pageSize =  1;
-        Page<Category> categories = categoryService.findAllPage( PageRequest.of(currentPage - 1, pageSize));
 
+        int pageSize =  5;
+        Page<Category> categories = categoryService.findAllPage( PageRequest.of(currentPage - 1, pageSize));
         int totalItems = categories.getNumberOfElements();
         int totalPages = categories.getTotalPages();
-
-
         model.addAttribute("categories", categories);
         model.addAttribute("totalItems", totalItems);
         model.addAttribute("totalPages", totalPages);
         model.addAttribute("currentPage", currentPage);
 
-//        if (categories.getTotalPages() > 1) {
-//            List<Integer> pageNumbers = IntStream.rangeClosed(1, categories.getTotalPages())
-//                    .boxed()
-//                    .collect(Collectors.toList());
-//            model.addAttribute("pageNumbers", pageNumbers);
-//        }
         return "categoryList";
     }
 
