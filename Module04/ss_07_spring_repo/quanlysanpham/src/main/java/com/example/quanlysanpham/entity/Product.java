@@ -4,6 +4,8 @@ package com.example.quanlysanpham.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -11,16 +13,28 @@ public class Product {
 
     @Id
     @Column(name = "product_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotBlank(message = "{notempty}")
     private String name;
     private boolean status;
 
     @Column(name = "expiry_date", columnDefinition = " date ")
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date expiryDate ;
+    private Date expiryDate;
+
+    @Min(value = 0, message = "phai lon hon 0")
     private double price;
+
+    @NotBlank(message = "{notempty}")
     private String country;
+
+
+    @ManyToOne
+    @JoinColumn( name = "classId", referencedColumnName = "classId")
+    private ClassName  className;
+
 
     public Product() {
     }
@@ -60,6 +74,15 @@ public class Product {
 
     public Date getExpiryDate() {
         return expiryDate;
+    }
+
+
+    public ClassName getClassName() {
+        return className;
+    }
+
+    public void setClassName(ClassName className) {
+        this.className = className;
     }
 
     public void setExpiryDate(Date expiryDate) {

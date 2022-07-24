@@ -13,35 +13,33 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/dangky")
-public class UserController  {
+public class UserController {
 
     private UserService service;
+
     @Autowired
     public UserController(UserService service) {
         this.service = service;
     }
 
 
-
-
     @GetMapping("/form")
-    public String showForm( Model model ){
-       model.addAttribute("user", new User() );
-       return  "/formCreate";
+    public String showForm(Model model) {
+        model.addAttribute("user", new User());
+        return "/formCreate";
 
     }
 
     @PostMapping("/create")
-    public String form(@Validated @ModelAttribute(  value = "user") User user,
-                       BindingResult bindingResult){
+    public String form(@Validated @ModelAttribute(value = "user") User user,
+                       BindingResult bindingResult) {
 
-        if (bindingResult.hasErrors()  ) {
+        if (bindingResult.hasErrors()) {
             return "/formCreate";
         }
 
         service.createUser(user);
         return "/success";
-
 
 
     }

@@ -10,7 +10,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column( name = "user_id")
+    @Column(name = "user_id")
     private int id;
 
     @NotBlank(message = "{notempty}")
@@ -24,8 +24,8 @@ public class User {
     private String lastname;
 
 
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Column( columnDefinition = "date")
+    //    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Column(columnDefinition = "date")
     private Date birthdate;
 
 

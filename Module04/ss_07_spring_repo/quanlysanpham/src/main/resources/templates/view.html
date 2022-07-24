@@ -24,6 +24,19 @@
         </tr>
 
         <tr>
+            <td>Class Name</td>
+            <td>
+                <select th:field="*{className.classId}">
+                    <option value="">All</option>
+                    <option th:each="class : ${classNames}"
+                            th:value="${class.classId}"
+                            th:text="${class.name}"
+                            th:selected="${class.classId.equals(product.className.classId ) }" />
+                </select>
+            </td>
+        </tr>
+
+        <tr>
             <td>ExpiryDate</td>
             <td><input type="date" th:field="*{expiryDate}"></td>
         </tr>
