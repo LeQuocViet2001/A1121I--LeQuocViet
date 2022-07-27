@@ -18,6 +18,14 @@ public class MusicValid implements Validator {
         if (music.getAuthor().equals("AA"))
             errors.rejectValue("author", "AA");
 
+        if(!music.getName().matches("[a-z A-Z]*")) {
+            errors.rejectValue("name","musicNameError","Invalid input");
+        }
+
+        if(!music.getAuthor().matches("[a-z A-Z]*")) {
+            errors.rejectValue("author","musicNameError","Invalid input");
+        }
+
 
     }
 }
