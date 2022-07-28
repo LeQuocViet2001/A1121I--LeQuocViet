@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="18d70e13-2ba4-4fc8-a470-30d88ff30e39" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/java/com/example/quanlysanpham/controller/CartProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/java/com/example/quanlysanpham/entity/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/resources/templates/cart/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/resources/templates/cart/listProduct.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/resources/templates/template/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module03/Case_Study_Web/caseStudy_Furama/src/main/webapp/view/customer/FormAddCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module03/Case_Study_Web/caseStudy_Furama/src/main/webapp/view/customer/FormAddCustomer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Module03/DaRot/testCuoimodel.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module03/DaRot/testCuoimodel.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss_03/A1121I1_Module4" beforeDir="false" afterPath="$PROJECT_DIR$/../ss_03/A1121I1_Module4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss_09_Aop_exception/muonsach/src/main/resources/templates/card/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss_09_Aop_exception/muonsach/src/main/resources/templates/card/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss_09_Aop_exception/muonsach/src/main/resources/templates/card/listCard.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss_09_Aop_exception/muonsach/src/main/resources/templates/card/listCard.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2CWqPlOCY7oOC85YgPJgGRPFz9s" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18d70e13-2ba4-4fc8-a470-30d88ff30e39" name="Default Changelist" comment="" />
+      <created>1658928666506</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658928666506</updated>
+      <workItem from="1658928667990" duration="72000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
