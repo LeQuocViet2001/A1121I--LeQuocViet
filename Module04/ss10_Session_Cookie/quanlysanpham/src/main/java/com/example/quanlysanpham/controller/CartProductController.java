@@ -78,9 +78,7 @@ public class CartProductController {
             if( !listId.contains( idProduct)){ // neu khong to tai moi them vo
                 jsonString = product.getId() + "," + jsonString;
             }
-
         }
-
         try {
             Cookie cookie  = new Cookie( "jsonString", URLEncoder.encode( jsonString, "UTF-8" ) );
             cookie.setMaxAge(60);
@@ -116,5 +114,34 @@ public class CartProductController {
 
 
 
+    @PostMapping("/addCard2")
+    public String addCard2(@RequestParam( value = "idProduct") String idProduct, Model model,
+                           @CookieValue(name = "jsonString", defaultValue = "") String  jsonString,
+                           HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+
+        Product product = productService.findById( Integer.parseInt(idProduct));
+
+//        if(  jsonString == null || jsonString.trim().equals("") || jsonString.isEmpty())
+//            jsonString = product.getId() + "";
+//        else{
+//            List<String>  listId = Arrays.asList(  jsonString.split(","));
+//            if( !listId.contains( idProduct)){ // neu khong to tai moi them vo
+//                jsonString = product.getId() + "," + jsonString;
+//            }
+//        }
+
+        try {
+//            String jsonStr = JSONArray.toJSONString(list);
+            Cookie cookie  = new Cookie( "jsonString", URLEncoder.encode( jsonString, "UTF-8" ) );
+            cookie.setMaxAge(60);
+            response.addCookie(cookie);
+            model.addAttribute("jsonString", cookie);
+            System.out.println(jsonString);
+        } catch (UnsupportedEncodingException e) {
+            System.out.println("That bai");
+            e.printStackTrace();
+        }
+        return "redirect:/shopping/cart";
+    }
 
 }

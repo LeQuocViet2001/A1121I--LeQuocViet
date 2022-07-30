@@ -19,5 +19,5 @@ public interface BlogService {
 
     Blog findById(String id);
 
-    List<Blog> getListSearch(String search);
+    List<Blog> findAllByTitleContains(String search);
 }

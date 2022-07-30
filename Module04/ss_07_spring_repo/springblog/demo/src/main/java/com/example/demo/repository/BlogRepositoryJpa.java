@@ -12,7 +12,8 @@ import java.util.List;
 @Transactional
 public interface BlogRepositoryJpa extends JpaRepository<Blog, Integer> {
 
-    @Query(value = "select * from blogs"
-            , nativeQuery = true)
-    List<Blog> getListSearch(String search);
+//    @Query(value = "select b from blogs b where b.name like ? "
+//            , nativeQuery = true )
+    @Query
+    List<Blog> findAllByTitleContaining(String search);
 }

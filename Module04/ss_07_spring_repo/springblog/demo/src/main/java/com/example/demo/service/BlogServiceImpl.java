@@ -47,8 +47,8 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public List<Blog> getListSearch(String search) {
-        return blogRepositoty.getListSearch(search);
+    public List<Blog> findAllByTitleContains(String search) {
+        return blogRepositoty.findAllByTitleContaining(search);
     }
 
 

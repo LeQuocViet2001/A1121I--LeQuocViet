@@ -33,7 +33,9 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public void delete(String id) {
-        categotyRepository.delete(categotyRepository.findById(Integer.parseInt(id)).orElse(null));
+        categotyRepository.delete(
+                categotyRepository.findById(Integer.parseInt(id.trim())).orElse(null));
+
     }
 
     @Override

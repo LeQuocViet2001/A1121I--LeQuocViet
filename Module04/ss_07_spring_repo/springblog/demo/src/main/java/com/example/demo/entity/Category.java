@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +13,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(columnDefinition = " int  ")
+    @Column(columnDefinition = " int")
     private int idTheme;
     private String nameTheme;
 
@@ -20,6 +23,7 @@ public class Category {
 //        cascade = CascadeType.ALL
 //    )
 //    @JoinColumn(name = "idTheme", referencedColumnName = "idTheme")
+    @JsonBackReference
     private List<Blog> blogs = new ArrayList<>();
 
 

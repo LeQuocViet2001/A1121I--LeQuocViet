@@ -13,6 +13,8 @@
             integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
             crossorigin="anonymous"></script>
 
+    <script src="/js/jquery.js"></script>
+    <script src="/js/search.js"></script>
     <style>
         * {
             box-sizing: border-box;
@@ -139,6 +141,8 @@
 
 
     </style>
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/search.js"></script>
 </head>
 <body>
 
@@ -175,22 +179,27 @@
                 <!--                    <a class="nav-link disabled" href="#">Disabled</a>-->
                 <!--                </li>-->
             </ul>
-            <form th:method="post" th:action="@{/blogs/search}" class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-lg-2" type="search" name="search" placeholder="Search" aria-label="Search"
-                       th:text="${search}">
-                <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>
-            </form>
+<!--            <form th:method="post" th:action="@{/blogs/search}" class="form-inline my-2 my-lg-0">-->
+<!--                <input class="form-control mr-lg-2" type="search" name="search" placeholder="Search" aria-label="Search"-->
+<!--                       th:text="${search}">-->
+<!--                <button class="btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>-->
+<!--            </form>-->
+            <div class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-lg-2" type="search" oninput="searchTitle()" name="searchTitle" id="searchTitle"
+                       placeholder="Search" aria-label="Search" >
+                <button class="btn btn-outline-success my-2 my-lg-0" type="submit" onclick="searchTitle()"  >Search</button>
+            </div>
         </div>
     </nav>
 
 </header>
 
 <div style="margin-top: 30px">
-    <div class="box-container">
+    <div class="box-container" id="result" >
+
+
         <th:block th:each="o : ${blogs}">
             <div class="box">
-
-
                 <div class="column">
                     <div class="card">
                         <h3 th:text="${ o.title}" class="card-title"></h3>
@@ -226,7 +235,7 @@
                                 <li class="exam-element flex-grow-ele2" style="flex-grow: 5;">
                                     <a>
                                         <button
-                                                th:onclick="showModelDelete( [[${o.id}]] ,[[ ${o.title}]])"
+                                                th:onclick="showModelDelete( [[${o.id}]] ,[[${o.title}]])"
                                                 class="btn btn-primary btn-lg"
                                                 style="background: orange;color: white; width: 80px"
                                                 data-toggle="modal"
@@ -257,7 +266,8 @@
     <div class="modal fade" id="modalDelete" data-backdrop="static" data-keyboard="false" tabindex="-1"
          aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <form method="post" th:action="@{/blogs/delete}" id="modelForm">
+<!--            <form method="post" th:action="@{/blogs/delete}" id="modelForm">-->
+            <form  id="modelForm" >
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="staticBackdropLabel">Thong Bao</h5>
@@ -266,7 +276,6 @@
                         </button>
                     </div>
 
-
                     <div class="modal-body">
                         <input hidden type="text" id="idDelete" name="idDelete">
                         <span>Ban co muon xoa </span>
@@ -274,7 +283,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Delete</button>
+                        <button type="submit" class="btn btn-primary" onclick="deleteBlog()">Delete</button>
                     </div>
 
                 </div>

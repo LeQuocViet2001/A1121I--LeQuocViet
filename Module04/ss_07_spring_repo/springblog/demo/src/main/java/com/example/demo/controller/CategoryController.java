@@ -20,15 +20,7 @@ public class CategoryController {
     @Autowired
 //    @Qualifier("categoryService")
     private CategoryService categoryService;
-//    @Autowired
-//    private BlogService blogService;
 
-//    @GetMapping("/list")
-//    public String getAll(Model model){
-//     List<Category> categories =  categoryService.getAllCategory();
-//    model.addAttribute("categories", categories );
-//    return "categoryList";
-//    }
 
 
     @GetMapping("/list")
@@ -56,9 +48,12 @@ public class CategoryController {
     }
 
     @PostMapping("/delete")
-    public String deleteCate(@RequestParam(value = "idDelete") String idDelete, Model model) {
+    public String deleteCatedd( @RequestParam(name = "idDelete") String idDelete) {
 
+        System.out.println("truoc");
         categoryService.delete(idDelete);
+        System.out.println("sau");
+
         return "redirect:/category/list";
     }
 

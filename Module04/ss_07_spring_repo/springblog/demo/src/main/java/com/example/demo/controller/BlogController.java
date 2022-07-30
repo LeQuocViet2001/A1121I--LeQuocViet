@@ -44,12 +44,12 @@ public class BlogController {
         return "redirect:/blogs/home";
     }
 
-    @PostMapping("/delete")
-    public String deleteCate(@RequestParam(value = "idDelete") String idDelete, Model model) {
-
-        blogService.delete(idDelete);
-        return "redirect:/blogs/home";
-    }
+//    @PostMapping("/delete")
+//    public String deleteCate(@RequestParam(value = "idDelete") String idDelete, Model model) {
+//
+//        blogService.delete(idDelete);
+//        return "redirect:/blogs/home";
+//    }
 
     @GetMapping("/detail")
     public String showDetail(@RequestParam(value = "id") String id, Model model) {
@@ -68,7 +68,7 @@ public class BlogController {
     @PostMapping("/search")
     public String search(@RequestParam(value = "search") String search, Model model) {
 
-        List<Blog> blogs = blogService.getListSearch(search);
+        List<Blog> blogs = blogService.findAllByTitleContains(search);
 //        List<Blog> blogs = new ArrayList<>();
 //        for ( Blog l: list ) {
 //            if(  l.getTitle().contains( search.trim()  ) ){
