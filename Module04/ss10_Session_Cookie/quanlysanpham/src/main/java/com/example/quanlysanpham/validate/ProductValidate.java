@@ -13,6 +13,7 @@ import java.util.Date;
 public class ProductValidate implements Validator {
     @Override
     public boolean supports(Class<?> clazz) {
+
         return Product.class.isAssignableFrom(clazz);
     }
 

@@ -39,7 +39,7 @@ public class CartProductController {
     @GetMapping("")
     public String showList(Model model, @RequestParam(value = "page") Optional<Integer> page){
         int currentPage = page.orElse(1);
-        int pageSize =  8;
+        int pageSize =  1;
 
         Page<Product> products = productService.getAll( PageRequest.of(currentPage - 1, pageSize));
         model.addAttribute("products",products );

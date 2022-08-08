@@ -1,0 +1,25 @@
+.vertical-menu {
+    width: inherit /* Set a width if you like */;
+
+    height: inherit;
+}
+
+
+.vertical-menu a {
+    /* background-color: cyan; */
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+    background-color: #e04080; /* Add a green color to the "active/current" link */
+    color: white;
+}
+
+
