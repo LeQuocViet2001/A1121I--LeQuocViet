@@ -7,7 +7,6 @@ import codegym.vn.casestudy_spring.entity.ServiceDAO.Service;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -20,10 +19,10 @@ public class Contract {
 
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate startDate;
+    private Date startDate;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate endDate;
+    private Date endDate;
 
     private double deposit;
     private double totalMoney;
@@ -43,7 +42,7 @@ public class Contract {
     public Contract() {
     }
 
-    public Contract(int idContract, LocalDate startDate, LocalDate endDate, double deposit, double totalMoney, Service service, Customer customer, Employee employee) {
+    public Contract(int idContract, Date startDate, Date endDate, double deposit, double totalMoney, Service service, Customer customer, Employee employee) {
         this.idContract = idContract;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -62,19 +61,19 @@ public class Contract {
         this.idContract = idContract;
     }
 
-    public LocalDate getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDate getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDate endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
@@ -118,17 +117,17 @@ public class Contract {
         this.employee = employee;
     }
 
-    public List<ContracDetail> getContracDetailListattachments() {
-        return contracDetailListattachments;
+    public List<ContractDetail> getContractDetailListattachments() {
+        return contractDetailListattachments;
     }
 
-    public void setContracDetailListattachments(List<ContracDetail> contracDetailListattachments) {
-        this.contracDetailListattachments = contracDetailListattachments;
+    public void setContractDetailListattachments(List<ContractDetail> contractDetailListattachments) {
+        this.contractDetailListattachments = contractDetailListattachments;
     }
 
     @OneToMany(cascade = CascadeType.ALL,
             mappedBy = "contract")
-    private List<ContracDetail> contracDetailListattachments;
+    private List<ContractDetail> contractDetailListattachments;
 
 
 

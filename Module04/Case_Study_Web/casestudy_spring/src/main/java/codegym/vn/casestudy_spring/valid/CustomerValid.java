@@ -22,8 +22,8 @@ public class CustomerValid implements Validator {
             errors.rejectValue("customerPhone","customerPhoneError","Invalid input");
         }
 
-        if(!customer.getCustomerId().matches("^KH\\-\\d{4}$")) {
-            errors.rejectValue("customerId","customerIdError","Invalid input");
-        }
+//        if(!customer.getCustomerId().matches("^KH\\-\\d{4}$")) {
+//            errors.rejectValue("customerId","customerIdError","Invalid input");
+//        }
     }
 }

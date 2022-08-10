@@ -1,5 +1,6 @@
 package codegym.vn.casestudy_spring;
 
+import codegym.vn.casestudy_spring.entity.ContractDao.AttachService;
 import codegym.vn.casestudy_spring.entity.CustomerDAO.CustomerType;
 import codegym.vn.casestudy_spring.entity.EmployeeDAO.Division;
 import codegym.vn.casestudy_spring.entity.EmployeeDAO.EducationDegree;
@@ -35,6 +36,9 @@ public class CasestudySpringApplication implements CommandLineRunner {
     @Autowired
     ServiceTypeRepo serviceTypeRepo;
 
+    @Autowired
+    AttachServiceRepo attachServiceRepo;
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -69,5 +73,10 @@ public class CasestudySpringApplication implements CommandLineRunner {
         serviceTypeRepo.save(new ServiceType(1,"Villa"));
         serviceTypeRepo.save(new ServiceType(2,"House"));
         serviceTypeRepo.save(new ServiceType(3,"Room"));
+
+        attachServiceRepo.save(new AttachService(1, "dv kem 1", 1232, 23, "Con"));
+        attachServiceRepo.save(new AttachService(2, "dv kem 2", 32423, 54, "Con"));
+        attachServiceRepo.save(new AttachService(3, "dv kem 3", 5345, 23, "Con"));
+        attachServiceRepo.save(new AttachService(4, "dv kem 4", 1223532, 54, "Con"));
     }
 }

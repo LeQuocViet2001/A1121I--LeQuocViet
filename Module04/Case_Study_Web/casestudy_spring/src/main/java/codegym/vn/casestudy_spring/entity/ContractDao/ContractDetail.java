@@ -4,17 +4,9 @@ package codegym.vn.casestudy_spring.entity.ContractDao;
 import javax.persistence.*;
 
 @Entity
-public class ContracDetail {
+public class ContractDetail {
 
 
-    public ContracDetail(Contract contract, AttachService attachService, int quantity) {
-        this.contract = contract;
-        this.attachService = attachService;
-        this.quantity = quantity;
-    }
-
-    public ContracDetail() {
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,11 +23,21 @@ public class ContracDetail {
 
     private int quantity;
 
+    public ContractDetail(Contract contract, AttachService attachService, int quantity) {
+        this.contract = contract;
+        this.attachService = attachService;
+        this.quantity = quantity;
+    }
+
+    public ContractDetail() {
+    }
+
+
     public Contract getContract() {
         return contract;
     }
 
-    public ContracDetail(int id, Contract contract, AttachService attachService, int quantity) {
+    public ContractDetail(int id, Contract contract, AttachService attachService, int quantity) {
         this.id = id;
         this.contract = contract;
         this.attachService = attachService;
@@ -64,6 +66,16 @@ public class ContracDetail {
 
     public int getQuantity() {
         return quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "ContractDetail{" +
+                "id=" + id +
+                ", contract=" + contract +
+                ", attachService=" + attachService +
+                ", quantity=" + quantity +
+                '}';
     }
 
     public void setQuantity(int quantity) {

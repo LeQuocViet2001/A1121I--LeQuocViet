@@ -6,6 +6,7 @@ import codegym.vn.casestudy_spring.entity.ContractDao.Contract;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -16,8 +17,10 @@ public class Customer  {
 
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Pattern(regexp = "^KH\\-\\d{4}$", message = "{customerIdError}")
     private String customerId;
     @NotBlank(message = "khong rong")
+    @Pattern(regexp = "\\w+", message="Name khong chua cac ky tu dac biet")
     private String customerName;
     private Date customerBirthday;
     private boolean customerGender;

@@ -63,29 +63,29 @@ public class AttachService {
         this.status = status;
     }
 
-    public List<ContracDetail> getContracDetailListattachments() {
-        return contracDetailListattachments;
+    public List<ContractDetail> getContractDetailListattachments() {
+        return contractDetailListattachments;
     }
 
-    public void setContracDetailListattachments(List<ContracDetail> contracDetailListattachments) {
-        this.contracDetailListattachments = contracDetailListattachments;
+    public void setContractDetailListattachments(List<ContractDetail> contractDetailListattachments) {
+        this.contractDetailListattachments = contractDetailListattachments;
     }
 
     public AttachService() {
     }
 
-    public AttachService(int idAttachService, String name, double cost, int unit, String status, List<ContracDetail> contracDetailListattachments) {
+    public AttachService(int idAttachService, String name, double cost, int unit, String status, List<ContractDetail> contractDetailListattachments) {
         this.idAttachService = idAttachService;
         this.name = name;
         this.cost = cost;
         this.unit = unit;
         this.status = status;
-        this.contracDetailListattachments = contracDetailListattachments;
+        this.contractDetailListattachments = contractDetailListattachments;
     }
 
     @OneToMany(cascade = CascadeType.ALL,
     mappedBy = "contract")
-    private List<ContracDetail> contracDetailListattachments;
+    private List<ContractDetail> contractDetailListattachments;
 
 
 
