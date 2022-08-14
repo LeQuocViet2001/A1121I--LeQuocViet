@@ -20,7 +20,6 @@
                 <div class="content col-md-10 col-lg-10 ">
                         <h1>Danh sach khach hang</h1>
 
-
                     <form  th:action="@{/customer/search}" method="get" class="form-inline container">
 
                         <div class="form-group mb-2">
@@ -74,7 +73,6 @@
                                 <th scope="col">Email</th>
                                 <th scope="col">Address</th>
                                 <th scope="col">Type</th>
-
                                 <th scope="col"> Sửa </th>
                                 <th scope="col"> Xóa </th>
                             </tr>
@@ -83,18 +81,14 @@
                             <tr th:object="${st}">
                                 <td th:text="${iterStat.count}"></td>
                                 <td th:text="*{customerId}"> </td>
-
                                 <td th:text="*{customerName}"></td>
                                 <td th:text="*{customerGender ? 'Male' : 'Famale'}"></td>
                                 <td th:text="*{#dates.format(customerBirthday, 'dd-MM-yyyy')}"></td>
-
                                 <td th:text="*{customerCardId}"> </td>
                                 <td th:text="*{customerPhone}"> </td>
                                 <td th:text="*{customerEmail}"> </td>
                                 <td th:text="*{customerAddress}"> </td>
-
                                 <td th:text="*{customerType.name}"></td>
-
 
 
                                 <td>
@@ -112,7 +106,6 @@
                                     </button>
                                 </td>
                             </tr>
-
                             </tbody>
 
 
@@ -146,15 +139,11 @@
                 </div>
         </div>
     </div>
-
 </div>
 
 
-
 <footer th:replace="~{/template::footer}">
-
 </footer>
-
 
 <div class="modal fade" id="modalDelete" data-backdrop="static" data-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -186,9 +175,7 @@
         document.getElementById("idDelete").value = id;
         document.getElementById("nameDelete").innerText =  document.getElementById("idDelete").value + name;
         // document.getElementById("modelForm").method = "post";
-
     }
 </script>
-
 </body>
 </html>

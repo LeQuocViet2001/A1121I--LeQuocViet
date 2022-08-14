@@ -36,7 +36,7 @@ public class CustomerController {
     }
 
     @GetMapping("/customer/list")
-    public String listCustomer( Model model, @RequestParam(value = "page") Optional<Integer> page){
+    public String getListPage( Model model, @RequestParam(value = "page") Optional<Integer> page){
         int currentPage = page.orElse(1);
         int pageSize =  5;
 

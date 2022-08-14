@@ -2,67 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18d70e13-2ba4-4fc8-a470-30d88ff30e39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/controller/ContractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/controller/ServiceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/ContractDao/AttachService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/ContractDao/ContracDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/ContractDao/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/CustomerDAO/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/CustomerDAO/CustomerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/EmployeeDAO/Division.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/EmployeeDAO/EducationDegree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/EmployeeDAO/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/EmployeeDAO/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/ServiceDAO/RentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/ServiceDAO/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/entity/ServiceDAO/ServiceType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/formatter/DateConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/formatter/DateFomatter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/AttachServiceRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/ContractDetailRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/ContractRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/CustomerRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/CustomerTypleRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/DivisionRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/EducationDegreeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/EmployeeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/PositionRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/RentTypeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/ServiceRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/repository/ServiceTypeRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/ContractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/ContractServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/CustomerTypeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/CustomerTypeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/EmployeeDaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/EmployeeDaoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/ServiceDaoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/service/ServiceDaoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/messenges.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/static/css/sa.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/static/css/template.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/customer/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/customer/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/customer/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/employee/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/employee/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/employee/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/service/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/service/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/service/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/entity/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/entity/Cataloge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/repo/BlogRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/repo/CatalogeRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/service/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/service/CatalogeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/service/CatalogeServiceImple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/java/com/example/endmoduleblog/service/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/static/css/navdrop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/static/css/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/templates/blog/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/templates/blog/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmoduleblog/src/main/resources/templates/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/controller/ClassController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/entity/Class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/repo/RepoClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/repo/RepoStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/service/ClassServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/service/IService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/service/ServiceClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/service/ServiceStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/java/com/example/endmodulestudent/service/StudentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/static/css/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/templates/class/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/templates/student/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/templates/student/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/templates/student/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Case_Study_Web/endmodulestudent/src/main/resources/templates/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Module03/Case_Study_Web/caseStudy_Furama/src/main/webapp/view/customer/FormAddCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module03/Case_Study_Web/caseStudy_Furama/src/main/webapp/view/customer/FormAddCustomer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Module03/DaRot/testCuoimodel.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Module03/DaRot/testCuoimodel.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/java/com/example/quanlysanpham/controller/CartProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/java/com/example/quanlysanpham/controller/CartProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/resources/templates/cart/listProduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss10_Session_Cookie/quanlysanpham/src/main/resources/templates/cart/listProduct.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case_Study_Web/Audit-Module4.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Case_Study_Web/Audit-Module4.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/java/codegym/vn/casestudy_spring/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Case_Study_Web/casestudy_spring/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Case_Study_Web/~$dit-Module4.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ss_03/A1121I1_Module4" beforeDir="false" afterPath="$PROJECT_DIR$/../ss_03/A1121I1_Module4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +77,7 @@
       <updated>1658928666506</updated>
       <workItem from="1658928667990" duration="72000" />
       <workItem from="1659889523306" duration="42000" />
+      <workItem from="1660293803110" duration="14000" />
     </task>
     <servers />
   </component>

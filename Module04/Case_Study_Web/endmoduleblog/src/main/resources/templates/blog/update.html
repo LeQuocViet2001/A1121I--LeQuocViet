@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/template::head('Create Blog')}"></head>
+<body>
+<div id="wrap">
+
+    <div th:id="main">
+            <div th:replace="~{/template::nav}"></div>
+
+
+            <div >
+                    <h1 style="text-align: center; font-size: 50px; color: royalblue" >New blog</h1>
+                    <form class="container" th:action="@{/blog/update}" method="post" th:object="${blog}" enctype="multipart/form-data">
+
+
+                        <div class="form-row">
+                            <div class="col-lg-6 mb-4" >
+                                <label>Id <span class="red"> (*)</span> </label>
+                                <input th:field="*{idBlog}" readonly  type="text" class="form-control">
+                                <span th:if="${#fields.hasErrors('idBlog')}" th:errors="*{idBlog}" class="red"></span>
+
+                            </div>
+                            <div class="col-lg-6 mb-4">
+                                <label>title <span class="red"> (*)</span> </label>
+                                <input th:field="*{title}"  type="text" class="form-control">
+                                <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="red"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="col-md-6 mb-4">
+                                <label>Ngay sinh</label>
+                                <input th:field="*{dateWrite}" name="customer_birthday" type="date" class="form-control"
+                                       placeholder="dd-MM-yyyy" min="1997-01-01" max="2030-12-31" required>
+                                <span th:if="${#fields.hasErrors('dateWrite')}" th:errors="*{dateWrite}"  class="red"></span>
+                            </div>
+
+                            <div class="col-lg-6 mb-4">
+                                <label>Type Customer<span class="red"> (*)</span> </label>
+                                <select th:field="*{cataloge.idCategory}" class="form-control">
+                                    <option th:each="o : ${catalogeList}"
+                                            th:value="${o.idCategory}"
+                                            th:text="${o.nameCategory}"
+                                            th:selected="${ o.idCategory == (blog.cataloge.idCategory ) }" />
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-4 mb-4">
+                                <label>content</label>
+                                <input th:field="*{content}"  type="text" class="form-control" required>
+                                <span th:if="${#fields.hasErrors('content')}" th:errors="*{content}"  class="red"></span>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <label>author</label>
+                                <input th:field="*{author}"  type="text" class="form-control" required>
+                                <span th:if="${#fields.hasErrors('author')}" th:errors="*{author}" class="red" ></span>
+
+                            </div>
+
+
+                            <div class="col-lg-4 mb-4">
+                                <label>Gender <span class="red"> (*)</span> </label>
+                                <div class="form-line">
+                                    <input type="radio" th:field="*{status}" th:value="true" id="male" th:selected="*{status}"  >
+                                    <label  for="male"> Male</label>
+
+                                    <input type="radio" th:field="*{status}" th:value="false" id="female" th:selected="*{!status}" >
+                                    <label  for="female"> Female </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-lg-12 mb-6">
+                                <label>star <span class="red"> (*)</span> </label>
+                                <input th:field="*{star}"  type="number" class="form-control">
+                                <span th:if="${#fields.hasErrors('star')}" th:errors="*{star}" class="red"></span>
+
+                            </div>
+
+                        </div>
+
+                        <input type="submit" class="btn btn-outline-success my-2 my-lg-0" value="Save">
+                        <input type="button" class="btn btn-outline-success my-2 my-lg-0" value="Go Back" onclick="history.back()"/>
+
+
+                    </form>
+            </div>
+    </div>
+</div>
+
+<footer th:replace="~{/template::footer}"></footer>
+</body>
+</html>
