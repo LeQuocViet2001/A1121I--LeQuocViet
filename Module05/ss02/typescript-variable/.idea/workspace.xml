@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d2347db-a1eb-405e-81a2-442500ef600c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module03/Case_Study_Web/caseStudy_Furama/src/main/webapp/view/customer/FormAddCustomer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module03/Case_Study_Web/caseStudy_Furama/src/main/webapp/view/customer/FormAddCustomer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module03/DaRot/testCuoimodel.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module03/DaRot/testCuoimodel.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module04/Case_Study_Web/endmodule/src/main/java/codegym/vn/endmodule/entity/PostNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module04/Case_Study_Web/endmodule/src/main/java/codegym/vn/endmodule/entity/PostNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module04/Case_Study_Web/endmodule/src/main/resources/templates/headerFooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module04/Case_Study_Web/endmodule/src/main/resources/templates/headerFooter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module04/Case_Study_Web/endmodule/src/main/resources/templates/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module04/Case_Study_Web/endmodule/src/main/resources/templates/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module04/ss_03/A1121I1_Module4" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module04/ss_03/A1121I1_Module4" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2DZjeo8km3lf0eBdWto0j9mJTtD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d2347db-a1eb-405e-81a2-442500ef600c" name="Default Changelist" comment="" />
+      <created>1660913598596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660913598596</updated>
+      <workItem from="1660913599736" duration="245000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
