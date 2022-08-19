@@ -1,0 +1,104 @@
+/* body {
+    margin: 0;
+  }
+   */
+/* .header {
+    background-color: #110d0d;
+    display: flex;
+    align-items: baseline;
+    padding: .5rem;
+    gap: 1rem;
+  } */
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: rgb(255, 255, 255) !important;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+
+}
+
+.link:hover {
+  color: orange !important;
+}
+
+.dropdown.active > .link,
+
+
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  /* dixch qua trai  */
+  left: -250px;
+  top: calc(100% + .1rem);
+  background-color: rgb(230, 221, 221);
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+
+.dropdown.active>.link + .dropdown-menu  {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-template-rows: auto auto;
+  /* Khoảng cách trên và dưới giữa các grid */
+  gap: 1rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+
+}
+
+
+/* Gile chinh cai the a khi do xuong Co the sua */
+.dropdown-links > a{
+  font-size: 16px !important;
+  color: rgb(57, 50, 50) !important;
+  text-decoration: none !important;
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+.dropdown-links > a:hover {
+  color: orange !important;
+}
+
+
+
+.heading {
+  font-size:18px !important ;
+  font-weight: bold;
+  padding-top: 5px !important ;
+  padding-bottom: 0px !important ;
+  text-decoration: none !important;
+  color: black !important;
+}
+
+
+
