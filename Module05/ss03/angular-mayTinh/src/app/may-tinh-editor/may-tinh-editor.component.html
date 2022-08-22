@@ -1,0 +1,25 @@
+<h2>Phep toan don gian</h2>
+
+
+<input #so1 type="number" placeholder="0" style="color: aliceblue" >
+<select #phepToan >
+  <option value="+"> + </option>
+  <option value="-"> - </option>
+  <option value="*"> * </option>
+  <option value="/"> / </option>
+</select>
+
+<input #so2 type="number" placeholder="0" >
+<input type="button" value="=" (click)="tinhToan( so1.value, so2.value, phepToan.value)">
+
+
+
+<p   > {{ketQua}}  </p>
+<!--<div>-->
+<!--  <label>Enter font size (px):</label>-->
+<!--  <input #element type="range" min="9" max="72" value="18" (change)="changeFontSizeValue(element.value)">-->
+<!--</div>-->
+
+<!--<p class="output" [style.fontSize.px]="fontSize">-->
+<!--  This is a paragraph.-->
+<!--</p>-->

@@ -1,0 +1,14 @@
+
+
+<body [style.background-color] = "favorColor">
+
+
+
+<h1>Show a Color Picker</h1>
+
+
+  <label for="favor">Select your favorite color:</label>
+  <input type="color" id="favor" #favor name="favor" value="#ff0000"><br><br>
+  <input type="submit"  (click)="changColor(  favor.value)">
+
+</body>
