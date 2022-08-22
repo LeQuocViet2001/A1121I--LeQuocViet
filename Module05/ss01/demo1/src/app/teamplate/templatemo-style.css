@@ -13,17 +13,18 @@ TABLE OF CONTENT
 	7. Preferences
 	8. Media Queries
 ----------------------------------------------*/
-/* 1. Universal Styles
+/* 1. Universal Styles #1f2124;
 ----------------------------------------------*/
-* {	font-family: 'Open Sans', sans-serif; }
-body {	font-size: 13px; }
-body, .templatemo-left-nav { background: #1f2124; }
+* {	font-family: 'Open Sans', sans-serif;}
+body {	font-size: 2rem; }
+/*body, .templatemo-left-nav { background: #1f2124 }*/
 h1, h2, h3 { margin: 0; }
 h2 { font-size: 1.6em; }
 h3 {
   color: #7f7f7f;
   font-size: 1.4em;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -154,19 +155,19 @@ footer { padding: 15px; }
 .form-control.highlight:-ms-input-placeholder { /* Internet Explorer 10+ */
   color:    #ccc;
 }
-.templatemo-search-form .input-group { position: relative; }
-.fa-search {
-  height:32px;
-  width:32px;
-  border: none;
-  cursor: pointer;
-  color:white;
-  background:transparent;
-  position:absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
+/*.templatemo-search-form .input-group { position: relative; }*/
+/*.fa-search {*/
+/*  height:32px;*/
+/*  width:32px;*/
+/*  border: none;*/
+/*  cursor: pointer;*/
+/*  color:white;*/
+/*  background:transparent;*/
+/*  position:absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  z-index: 100;*/
+/*}*/
 .mobile-menu-icon {
   cursor:pointer;
   display:none;
@@ -215,7 +216,12 @@ footer { padding: 15px; }
   padding: 0;
   overflow-x: hidden;
 }
-.templatemo-content-container {	padding: 40px 50px; }
+.templatemo-content-container {
+
+  padding: 40px 50px;
+  margin-top: 60px;
+
+}
 .templatemo-flex-row {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -349,7 +355,7 @@ footer { padding: 15px; }
   text-transform: uppercase;
   vertical-align: middle;
 }
-.templatemo-login-form .form-group { margin-bottom: 20px; }
+.templatemo-login-form .form-group > *{ margin-bottom: 10px; font-size: 2rem }
 .templatemo-login-form .form-group:last-child {	margin-bottom: 0; }
 .input-group-addon { background: none; }
 .btn-primary {
@@ -389,32 +395,32 @@ footer { padding: 15px; }
 
 /* Style checkboxes and radio buttons
 http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953 */
-input[type="checkbox"] {  display:none; }
-input[type="checkbox"] + label span {
-  display:inline-block;
-  width:26px;
-  height:25px;
-  margin:-1px 4px 0 0;
-  vertical-align:middle;
-  background:url(../images/checkbox-radio-sheet.png) left top no-repeat;
-  cursor:pointer;
-}
-input[type="checkbox"]:checked + label span {
-  background:url(../images/checkbox-radio-sheet.png) -26px top no-repeat;
-}
-input[type="radio"] { display:none; }
-input[type="radio"] + label span {
-  display:inline-block;
-  width:26px;
-  height:25px;
-  margin:-1px 4px 0 0;
-  vertical-align:middle;
-  background:url(../images/checkbox-radio-sheet.png) -52px top no-repeat;
-  cursor:pointer;
-}
-input[type="radio"]:checked + label span {
-  background:url(../images/checkbox-radio-sheet.png) -78px top no-repeat;
-}
+/*input[type="checkbox"] {  display:none; }*/
+/*input[type="checkbox"] + label span {*/
+/*  display:inline-block;*/
+/*  width:26px;*/
+/*  height:25px;*/
+/*  margin:-1px 4px 0 0;*/
+/*  vertical-align:middle;*/
+/*  background:url(../images/checkbox-radio-sheet.png) left top no-repeat;*/
+/*  cursor:pointer;*/
+/*}*/
+/*input[type="checkbox"]:checked + label span {*/
+/*  background:url(../images/checkbox-radio-sheet.png) -26px top no-repeat;*/
+/*}*/
+/*!*input[type="radio"] { display:none; }*!*/
+/*input[type="radio"] + label span {*/
+/*  display:inline-block;*/
+/*  width:26px;*/
+/*  height:25px;*/
+/*  margin:-1px 4px 0 0;*/
+/*  vertical-align:middle;*/
+/*  background:url(../images/checkbox-radio-sheet.png) -52px top no-repeat;*/
+/*  cursor:pointer;*/
+/*}*/
+/*input[type="radio"]:checked + label span {*/
+/*  background:url(../images/checkbox-radio-sheet.png) -78px top no-repeat;*/
+/*}*/
 
 /* 6. Manage Users
 ------------------------------*/

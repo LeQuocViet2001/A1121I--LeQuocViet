@@ -69,8 +69,6 @@
         <div class="col-md-6 mb-4">
             <label >Birthday</label>
             <input name="customer_birthday"  type="date" class="form-control"   placeholder="dd-mm-yyyy"  min="1997-01-01" max="2030-12-31" required>
-
-
         </div>
     </div>
     <div class="form-row">

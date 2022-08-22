@@ -30,6 +30,7 @@ public class PostNew {
     private Date  dateWrite;
 
 
+
     @NotBlank(message = "{notempty}")
     private String author;
 

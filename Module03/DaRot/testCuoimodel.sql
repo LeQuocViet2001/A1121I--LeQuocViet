@@ -39,18 +39,15 @@ INSERT INTO `endmodule`.`sach` (`ma_sach`, `ten_sach`, `tac_gia`, `mo_ta`, `so_l
 
 
 
-drop trigger if exists so_luong_tru;
+drop trigger if exists muon_sach;
 delimiter //
-create trigger so_luong_tru
+create trigger muon_sach
 before insert
-on the_muon_sach for each row
+on library_card for each row
 begin
-	
     DECLARE updatecount INT;
-      set updatecount = (select so_luong from  sach where ma_sach = new.ma_sach );
-      
-	update sach set so_luong = (updatecount - 1 ) where ma_sach   = new.ma_sach;
-
+      set updatecount = (select quantity from  book  where id = new.id );
+	update book  set quantity = (updatecount - 1 ) where id   = new.id;
 end  
 // delimiter ;
 
