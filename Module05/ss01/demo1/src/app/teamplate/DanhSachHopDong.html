@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H F</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- custom css file link  -->
+
+  <style>
+    .center {
+      text-align: center;
+    }
+    .pagination li{
+      list-style: none;
+      font-size: 1.5rem;
+      float: left;
+      margin-left: 5px;
+      margin-top: 0.5em;
+    }
+    .pagination li {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+
+    .pagination li.active {
+      background-color: rgb(255, 165, 0);
+      color: white;
+    }
+
+    .pagination li:hover:not(.active) {
+      background-color: #ddd;
+    }
+
+    .box {
+      width: 30%;
+      float: left;
+      margin: 50px 20px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    }
+    .box a{
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    .box a:hover {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    .box h3{
+      margin-bottom: 10px;
+    }
+    .box {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+    .box p{
+      line-height: 28px;
+      height: 60px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="templatemo-style.css">
+
+
+</head>
+<body>
+<!-- header section starts  -->
+<header>
+  <div id="menu-bar" class="fas fa-bars"></div>
+  <a href="" class="logo" style="text-decoration: none;"><span>FUU</span>Ràma</a>
+  <nav class="navbar">
+    <a href="" style="text-decoration: none;">Trang Chủ</a>
+    <div class="dropdown">
+      <a href="#" style="text-decoration: none;">Dịch vụ</a>
+      <div class="dropdown-content">
+        <a href="#">Villa</a>
+        <a href="#">Room</a>
+        <a href="#">House</a>
+
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" style="text-decoration: none;">Contract</a>
+      <div class="dropdown-content">
+
+        <a href="#">???????</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#" style="text-decoration: none;">Employee</a>
+      <div class="dropdown-content">
+        <a href="#">???</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" style="text-decoration: none;">Customer</a>
+      <div class="dropdown-content">
+        <a href="#">???</a>
+
+      </div>
+    </div>
+
+
+
+  </nav>
+  <div class="icons">
+    <i class="fas fa-search" id="search-btn"></i>
+
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fas fa-user" id="login-btn"></i></button>
+      <div class="dropdown-content">
+
+        <a href="#" target="_blank">?</a>
+
+        <a href="#" target="_blank">???</a>
+        <a href="#" target="_blank">????</a>
+        <a href="#">Đăng Xuất</a>
+      </div>
+    </div>
+
+    <a class="fas fa-plus" id="plus-btn" href="#"></a>
+
+    <a href="#" class="login">Login</a>
+
+  </div>
+  <form action="#" class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="fas fa-search"></label>
+  </form>
+</header>
+
+
+
+<article>
+  <section class="tableList" >
+  <div class="templatemo-content-container">
+    <h1> Danh sach hop dong</h1>
+    <a href="#" style="margin:1rem 0 0 1rem"><button class="btn btn-primary">Thêm</button></a>
+    <div class="templatemo-content-widget no-padding">
+      <div class="panel panel-default table-responsive table-padding">
+        <table class="table table-striped table-bordered templatemo-user-table" id="data-table">
+          <thead>
+          <tr>
+            <td align="center"><span class="white-text">#</span></td>
+            <td align="center"><span class="white-text">idContract </span> </td>
+            <td align="center"><span class="white-text">startDate</span> </td>
+            <td align="center"><span class="white-text">deposit</span> </td>
+            <td align="center"><span class="white-text">totalMoney</span> </td>
+            <td align="center"><span class="white-text">service</span> </td>
+            <td align="center"><span class="white-text">customer</span> </td>
+            <td align="center"><span class="white-text">employee</span> </td>
+            <td align="center">Chỉnh sửa</td>
+            <td align="center">Xoá</td>
+          </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center">AAA</td>
+            <td align="center"><a href="#" class="templatemo-edit-btn">Chỉnh sửa</a></td>
+            <td align="center"><a href="#" class="templatemo-edit-btn" onclick="return confirm('Bạn có chắc chắn muốn xoá？');">Xóa</a></td>
+
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+
+
+</article>
+
+<!-- footer section  -->
+<footer class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>Về Chúng Tôi</h3>
+      <p> Lê Quốc Việt </p>
+    </div>
+    <div class="box">
+      <h3>Chi Nhánh</h3>
+      <a href="#">Ha Noi</a>
+      <a href="#">Hai Phong</a>
+      <a href="#">Da Nang</a>
+      <a href="#">Ho Chi Minh</a>
+    </div>
+    <div class="box">
+      <h3>Liên Kết</h3>
+      <a href="#">Bảo Tàng Và Di Tích Lịch Sử</a>
+      <a href="#">Đồ Ăn</a>
+      <a href="#">Công Viên</a>
+      <a href="#">Spa</a>
+
+    </div>
+    <div class="box">
+      <h3>Theo Dõi Chúng Tôi tại: </h3>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">Linkedin</a>
+    </div>
+  </div>
+  <h1 class="credit"> created by <span> Le Quoc Ziet </span> | all rights reserved! </h1>
+</footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="scrips.js"></script>
+<!-- custom js file link  -->
+<!--<script src="{{ asset('assets/web/script/script.js') }}"></script>-->
+
+
+</body>
+</html>
