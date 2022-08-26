@@ -1,0 +1,40 @@
+<h2 style="margin-top: 20px">Today's article</h2>
+<hr>
+
+
+<div class="row">
+  <div class="col-lg-6">
+    <div *ngFor="let art of articles">
+      <a href="{{art.url}}" target="_blank">{{art.title}}</a>:
+    </div>
+    <hr>
+  </div>
+  <div class="col-lg-6">
+    <div>
+      <h2>Article Information</h2>
+      <table>
+        <tr>
+          <td>Title:</td>
+          <td><textarea #titles  cols="70"> {{article.title}} </textarea>  </td>
+        </tr>
+        <tr>
+          <td>Url:</td>
+          <td>
+            <textarea #urls  cols="70"> {{article.url}}</textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button style="float: right" (click)="addNewArticle(titles.value, urls.value)">Add</button></td>
+        </tr>
+      </table>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<hr>
+
