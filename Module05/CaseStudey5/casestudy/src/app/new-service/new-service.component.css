@@ -1,8 +1,24 @@
+/*
 
-* {	font-family: 'Open Sans', sans-serif; }
+Visual Admin Template
+http://www.templatemo.com/preview/templatemo_455_visual_admin
+
+TABLE OF CONTENT
+	1. Universal Styles
+	2. Left Column
+	3. Right Column
+	4. Charts & Maps
+	5. Login
+	6. Manage Users
+	7. Preferences
+	8. Media Queries
+----------------------------------------------*/
+/* 1. Universal Styles
+----------------------------------------------*/
+* {	font-family: 'Open Sans', sans-serif;  font-size: 100%; }
 body {	 }
 body, .templatemo-left-nav { background: #1f2124; }
-h1, h2, h3 { margin: 0; font-size: large }
+h1, h2, h3 { margin: 0; }
 /*h2 { font-size: 1.6em; }*/
 h3 {
   color: #7f7f7f;

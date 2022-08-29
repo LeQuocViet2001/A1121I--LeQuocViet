@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {Student} from "../student";
+import {Component, OnInit} from '@angular/core';
+import {Student} from '../student';
+
 
 @Component({
   selector: 'app-list',
@@ -8,17 +9,17 @@ import {Student} from "../student";
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
-  student: Student= {};
+
+  studentA: Student = {};
+
   studentList: Student[] = [
     {
       id: 1,
       name: 'dsd',
-      age:12,
+      age: 12,
       gender: true,
       mark: 2,
       address: 'sfsdfds',
@@ -27,7 +28,7 @@ export class ListComponent implements OnInit {
     {
       id: 2,
       name: 'asd',
-      age:4,
+      age: 4,
       gender: true,
       mark: 2,
       address: 'asd',
@@ -36,16 +37,28 @@ export class ListComponent implements OnInit {
     {
       id: 3,
       name: 'vc',
-      age:3233,
+      age: 3233,
       gender: false,
       mark: 2,
       address: 'sad',
       number: 4444
     },
-  ]
+  ];
+  idDelete  = 2 ;
+  nameDelete = 'abc';
 
-  getAllStudent(){
-    return this.studentList;
+  ngOnInit(): void {
   }
 
+  showDataModelDelete(id: number, name: string) {
+    console.log(id+","+name);
+    this.idDelete = id;
+    this.nameDelete = name;
+
+
+  }
+
+  deleteStudent(value: string, value2: any) {
+    
+  }
 }

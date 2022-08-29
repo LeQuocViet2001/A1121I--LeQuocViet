@@ -1,0 +1,118 @@
+<div class="content  ">
+  <h1>Danh sach khach hang</h1>
+
+  <form   method="get" class="form-inline container">
+
+    <div class="form-group mb-2">
+      <button type="button"  onclick="location.href='/customer/create' "   class=" mr-1 btn btn-outline-info">
+        Thêm mới
+      </button>
+    </div>
+
+    <div class="form-group mb-2">
+      <label for="nameSearch"  class="mr-1">Email</label>
+      <input  type="search" name="nameSearch" id="nameSearch"   placeholder="name Search" class="form-control"   >
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="typeSearch"  class="mr-1">Type</label>
+      <select  class="form-control" name="typeSearch"  id="typeSearch"  >
+        <option value=""   >All</option>
+        <option>Â</option>
+        <option>BB</option>
+        <option>Ê</option>
+      </select>
+    </div>
+
+
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="genderSearch"  class="mr-1">Gender</label>
+      <select  class="form-control" name="genderSearch"  id="genderSearch"  >
+        <option value="" >All</option>
+        <option value="true" >Male</option>
+        <option value="false" >Famale</option>
+
+      </select>
+    </div>
+
+    <div class="form-group mx-sm-3 mb-2">
+      <button class=" form-group btn btn-outline-success my-2 my-lg-0" type="submit">Search</button>
+
+    </div>
+  </form>
+  <table id="tablePhanTrang"   class=" table table-striped table-bordered  "   >
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">BirtDate</th>
+      <th scope="col">IdCard</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th scope="col">Type</th>
+      <th scope="col"> Sửa </th>
+      <th scope="col"> Xóa </th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr >
+      <td ></td>
+      <td > </td>
+      <td ></td>
+      <td  > 'Famale' </td>
+      <td ></td>
+      <td ></td>
+      <td ></td>
+      <td ></td>
+      <td ></td>
+      <td ></td>
+
+
+
+      <td>
+        <a ><button    class="btn btn-outline-info" >
+          Sửa
+        </button></a>
+      </td>
+      <td>
+        <button type="button"
+                class="btn btn-outline-danger" data-toggle="modal"
+                data-target="#modalDelete">
+          Xóa
+        </button>
+      </td>
+    </tr>
+    </tbody>
+
+
+  </table>
+<!--  <nav aria-label="Pagination" th:if="${totalPages > 0}">-->
+<!--    <ul class="pagination justify-content-center font-weight-bold">-->
+<!--      <li class="page-item" th:classappend="${numbers eq 0} ? 'disabled'">-->
+<!--        <a class="page-link"-->
+<!--           th:href="@{/customer/search(page=${numbers lt 2 ? 1 : numbers}, nameSearch=${nameSearch}, typeSearch=${typeSearch} ) } "-->
+<!--           aria-label="Previous" title="Previous Page" data-toggle="tooltip">-->
+<!--          <span aria-hidden="true">&laquo;</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li class="page-item" th:classappend="${i eq numbers + 1} ? 'active'"-->
+<!--          th:each="i : ${#numbers.sequence( 1, totalPages, 1)}">-->
+<!--        <a class="page-link"-->
+<!--           th:href="@{/customer/search( page=${i}  ,nameSearch=${nameSearch} , typeSearch=${typeSearch}) }" th:text="${i}"z-->
+<!--           th:title="${'Page '+ i}" data-toggle="tooltip"></a>-->
+<!--      </li>-->
+<!--      <li class="page-item" th:classappend="${numbers + 1 eq totalPages} ? 'disabled'">-->
+<!--        <a class="page-link"-->
+<!--           th:href="@{/customer/search( page=${numbers + 2}, nameSearch=${nameSearch},   typeSearch=${typeSearch})}"-->
+<!--           aria-label="Next" title="Next Page" data-toggle="tooltip">-->
+<!--          <span aria-hidden="true">&raquo;</span>-->
+<!--        </a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+
+
+</div>

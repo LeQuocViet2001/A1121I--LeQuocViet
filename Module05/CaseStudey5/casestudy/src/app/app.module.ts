@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListServiceComponent } from './list-service/list-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
+import { NewServiceComponent } from './new-service/new-service.component';
+import { ListCustomerComponent } from './list-customer/list-customer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { UpdateServiceComponent } from './update-service/update-service.componen
     NavbarComponent,
     FooterComponent,
     ListServiceComponent,
-    UpdateServiceComponent
+    UpdateServiceComponent,
+    NewServiceComponent,
+    ListCustomerComponent
   ],
   imports: [
     BrowserModule,
