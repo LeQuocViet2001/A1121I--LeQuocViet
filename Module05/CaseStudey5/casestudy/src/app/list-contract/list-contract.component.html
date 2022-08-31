@@ -1,0 +1,127 @@
+<div class="templatemo-content-container  ">
+
+  <div class="templatemo-content-widget no-padding">
+    <div class="panel panel-default table-responsive table-padding">
+      <h1>Danh sach hop dong</h1>
+
+<!--      <form   method="get"  style="justify-content: space-between; align-items: center" class="   form-inline container">-->
+
+<!--        <div class="form-group mb-2">-->
+<!--          <button type="button"  onclick="location.href='/customer/create' "   class=" btn btn-primary  ">-->
+<!--            Thêm mới-->
+<!--          </button>-->
+<!--        </div>-->
+
+<!--        <div class="form-group mb-2">-->
+<!--          <label for="nameSearch"  class="mr-1">Email</label>-->
+<!--          <input  type="search" name="nameSearch" id="nameSearch"   placeholder="name Search" class="form-control"   >-->
+<!--        </div>-->
+
+<!--        <div class="form-group mx-sm-3 mb-2">-->
+<!--          <label for="typeSearch"  class="mr-1">Type</label>-->
+<!--          <select  class="form-control" name="typeSearch"  id="typeSearch"  >-->
+<!--            <option value=""   >All</option>-->
+<!--            <option>Â</option>-->
+<!--            <option>BB</option>-->
+<!--            <option>Ê</option>-->
+<!--          </select>-->
+<!--        </div>-->
+
+
+<!--        <div class="form-group mx-sm-3 mb-2">-->
+<!--          <label for="genderSearch"  class="mr-1">Gender</label>-->
+<!--          <select  class="form-control" name="genderSearch"  id="genderSearch"  >-->
+<!--            <option value="" >All</option>-->
+<!--            <option value="true" >Male</option>-->
+<!--            <option value="false" >Famale</option>-->
+
+<!--          </select>-->
+<!--        </div>-->
+
+<!--        <div class="form-group mx-sm-3 mb-2">-->
+<!--          <button class="  mr-1 btn btn-success " type="button">Search</button>-->
+<!--        </div>-->
+<!--      </form>-->
+
+      <table class="table table-striped table-bordered templatemo-user-table" id="data-table">
+        <thead class="thead-dark">
+        <tr>
+          <th ><span class="white-text" scope="col">Index </span></th>
+          <th ><span class="white-text" scope="col">Name </span></th>
+          <th ><span class="white-text" scope="col">Gender </span></th>
+          <th ><span class="white-text" scope="col">BirtDate </span></th>
+          <th ><span class="white-text" scope="col">IdCard </span></th>
+          <th ><span class="white-text" scope="col">Phone </span></th>
+          <th ><span class="white-text" scope="col">Email </span></th>
+          <th ><span class="white-text" scope="col">Address </span></th>
+          <th ><span class="white-text" scope="col">Type </span></th>
+          <th ><span class="white-text" scope="col">Sửa </span></th>
+          <th ><span class="white-text" scope="col">Xóa </span></th>
+
+
+
+        </tr>
+        </thead>
+        <tbody >
+        <tr >
+          <td ></td>
+
+          <td ></td>
+          <td  > 'Famale' </td>
+          <td ></td>
+          <td ></td>
+          <td ></td>
+          <td ></td>
+          <td ></td>
+          <td ></td>
+
+
+
+          <td>
+            <a ><button    class="btn btn-outline-info" >
+              Sửa
+            </button></a>
+          </td>
+          <td>
+            <button type="button"
+                    class="btn btn-outline-danger" data-toggle="modal"
+                    data-target="#modalDelete">
+              Xóa
+            </button>
+          </td>
+        </tr>
+        </tbody>
+
+
+      </table>
+
+
+    </div>
+  </div>
+  <!--  <nav aria-label="Pagination" th:if="${totalPages > 0}">-->
+  <!--    <ul class="pagination justify-content-center font-weight-bold">-->
+  <!--      <li class="page-item" th:classappend="${numbers eq 0} ? 'disabled'">-->
+  <!--        <a class="page-link"-->
+  <!--           th:href="@{/customer/search(page=${numbers lt 2 ? 1 : numbers}, nameSearch=${nameSearch}, typeSearch=${typeSearch} ) } "-->
+  <!--           aria-label="Previous" title="Previous Page" data-toggle="tooltip">-->
+  <!--          <span aria-hidden="true">&laquo;</span>-->
+  <!--        </a>-->
+  <!--      </li>-->
+  <!--      <li class="page-item" th:classappend="${i eq numbers + 1} ? 'active'"-->
+  <!--          th:each="i : ${#numbers.sequence( 1, totalPages, 1)}">-->
+  <!--        <a class="page-link"-->
+  <!--           th:href="@{/customer/search( page=${i}  ,nameSearch=${nameSearch} , typeSearch=${typeSearch}) }" th:text="${i}"z-->
+  <!--           th:title="${'Page '+ i}" data-toggle="tooltip"></a>-->
+  <!--      </li>-->
+  <!--      <li class="page-item" th:classappend="${numbers + 1 eq totalPages} ? 'disabled'">-->
+  <!--        <a class="page-link"-->
+  <!--           th:href="@{/customer/search( page=${numbers + 2}, nameSearch=${nameSearch},   typeSearch=${typeSearch})}"-->
+  <!--           aria-label="Next" title="Next Page" data-toggle="tooltip">-->
+  <!--          <span aria-hidden="true">&raquo;</span>-->
+  <!--        </a>-->
+  <!--      </li>-->
+  <!--    </ul>-->
+  <!--  </nav>-->
+
+
+</div>

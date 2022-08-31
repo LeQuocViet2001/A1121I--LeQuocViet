@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');*/
+/*@import url("https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css");*/
+/*@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");*/
 
 :root{
   --orange:#ffa500;
@@ -26,10 +28,19 @@
 }
 
 html{
-  font-size: 62.5%;
   overflow-x: hidden;
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
+  /*font-size: 1rem;*/
+}
+
+
+.titleName{
+  font-size: 40px;
+  text-align: center;
+  color: orange;
+  /*font-style: italic;*/
+
 }
 
 section{
@@ -56,17 +67,17 @@ section{
 .btn{
   display: inline-block;
   margin-top: 1rem;
-  background:var(--orange);
-  color:#fff;
-  padding:.8rem 3rem;
-  border:.2rem solid var(--orange);
+  /*background:var(--orange);*/
+  /*color:#fff;*/
+  /*padding:.8rem 3rem;*/
+  /*border:.2rem solid var(--orange);*/
   cursor: pointer;
-  font-size: 1.7rem;
+  /*font-size: 1.7rem;*/
 }
 
 .btn:hover{
-  background:rgba(255, 165, 0,.2);
-  color:var(--orange);
+  /*background:rgba(255, 165, 0,.2);*/
+  /*color:var(--orange);*/
 }
 
 /*header{*/
@@ -658,5 +669,10 @@ section{
   }
 
 }
+
+
+
+
+
 
 

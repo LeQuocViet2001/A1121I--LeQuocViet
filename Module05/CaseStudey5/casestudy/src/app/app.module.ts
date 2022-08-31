@@ -10,6 +10,12 @@ import { ListServiceComponent } from './list-service/list-service.component';
 import { UpdateServiceComponent } from './update-service/update-service.component';
 import { NewServiceComponent } from './new-service/new-service.component';
 import { ListCustomerComponent } from './list-customer/list-customer.component';
+import { TestAComponent } from './test-a/test-a.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { NewContractComponent } from './new-contract/new-contract.component';
+import { ListContractComponent } from './list-contract/list-contract.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +25,17 @@ import { ListCustomerComponent } from './list-customer/list-customer.component';
     ListServiceComponent,
     UpdateServiceComponent,
     NewServiceComponent,
-    ListCustomerComponent
+    ListCustomerComponent,
+    TestAComponent,
+    NewCustomerComponent,
+    UpdateCustomerComponent,
+    NewContractComponent,
+    ListContractComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
