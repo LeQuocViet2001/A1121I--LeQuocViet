@@ -374,14 +374,14 @@ section{
 }
 
 .packages .box-container .box{
-  flex:1 1 30rem;
+  flex:1 1 5rem;
   border-radius: .5rem;
   overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  box-shadow: 0 1rem 2rem rgba(0,0,0, .025);
 }
 
 .packages .box-container .box img{
-  height: 25rem;
+  height: 30rem;
   width:100%;
   object-fit: cover;
 }
@@ -391,7 +391,7 @@ section{
 }
 
 .packages .box-container .box .content h3{
-  font-size:2rem;
+  /*font-size:2rem;*/
   color:#333;
 }
 
@@ -400,12 +400,19 @@ section{
 }
 
 .packages .box-container .box .content p{
-  font-size:1.7rem;
+  /*font-size:1.7rem;*/
   color:#666;
   padding:1rem 0;
 }
 
-.packages .box-container .box .content .stars i{
+.packages .box-container .box .content .stars i, i{
+  margin-top: 2px;
+  margin-left: 5px;
+  font-size:1.7rem;
+  color:var(--orange);
+}
+
+.gallery .box-container .box .content .stars i{
   font-size:1.7rem;
   color:var(--orange);
 }
@@ -418,7 +425,7 @@ section{
 
 .packages .box-container .box .content .price span{
   color:#666;
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
   text-decoration: line-through;
 }
 
@@ -429,7 +436,7 @@ section{
 }
 
 .services .box-container .box{
-  flex: 1 1 30rem;
+  flex: 1 1 20rem;
   border-radius: .5rem;
   padding:1rem;
   text-align: center;
@@ -437,17 +444,17 @@ section{
 
 .services .box-container .box i{
   padding:1rem;
-  font-size: 5rem;
+  font-size: 3rem;
   color:var(--orange);
 }
 
 .services .box-container .box h3{
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
   color:#333;
 }
 
 .services .box-container .box p{
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
   color:#666;
   padding:1rem 0;
 }
@@ -467,13 +474,13 @@ section{
   box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
   border:1rem solid #fff;
   border-radius: .5rem;
-  flex:1 1 30rem;
+  flex:1 1 20rem;
   height: 25rem;
   position: relative;
 }
 
 .gallery .box-container .box img{
-  height: 100%;
+  height: 70%;
   width:100%;
   object-fit: cover;
 }
@@ -494,12 +501,13 @@ section{
 }
 
 .gallery .box-container .box .content h3{
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   color:var(--orange);
+  margin-top: 20px;
 }
 
 .gallery .box-container .box .content p{
-  font-size: 1.5rem;
+  font-size: 1rem;
   color:#eee;
   padding:.5rem 0;
 }
