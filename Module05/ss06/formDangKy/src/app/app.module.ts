@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DangkyComponent } from './dangky/dangky.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {ReactiveFormsModule} from '@angular/forms';
+import { DangnhapComponent } from './dangnhap/dangnhap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DangkyComponent
+    DangkyComponent,
+    DangnhapComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
