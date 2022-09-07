@@ -1,0 +1,242 @@
+<article>
+
+
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+    <div class="content">
+      <h3>welcome to Furama</h3>
+      <a href="#" class="btn">Xem thêm </a>
+    </div>
+
+<!--    <div class="controls">-->
+<!--      <button   class="vid-btn "   [ngStyle]="{background: active ==true ? 'red':''}"        value="0" (click)="changVideo( $event )"   ></button>-->
+<!--      <button   class="vid-btn "     [ngStyle]="{background: active ==false ? 'red':''}"                                                   value="1" (click)="changVideo1( $event )"  ></button>-->
+<!--    </div>-->
+
+    <div class="controls">
+
+<!--      <h1>Select one:</h1>-->
+      <div id="radios">
+        <label for="input1"></label>
+        <input  id="input1" name="radio"  value="0" (click)="changVideo($event)"  type="radio" />
+        <label for="input2"></label>
+        <input  id="input2" name="radio"  value="1" (click)="changVideo($event)" type="radio" />
+        <label for="input3"></label>
+        <input  id="input3" name="radio" value="2" (click)="changVideo($event)"  type="radio" />
+        <label for="input4"></label>
+        <input  id="input4" name="radio"  value="4" (click)="changVideo($event)" type="radio" />
+        <label for="input5"></label>
+        <input  id="input5" name="radio"  value="3" (click)="changVideo($event)" type="radio" />
+        <span id="slider"></span>
+      </div>
+    </div>
+
+
+
+
+    <div class="video-container">
+      <video    [src]="dataScrVideo"   id="video-slider"  class="active" loop autoplay muted></video>
+    </div>
+
+
+
+
+<!--    <div class="controls">-->
+<!--      <span class="vid-btn active" data-src="assets/image/vid-1.mp4"></span>-->
+<!--      <span class="vid-btn" data-src="assets/image/vid-2.mp4"></span>-->
+
+<!--    </div>-->
+<!--    <div class="video-container">-->
+<!--      <video src="assets/image/vid-1.mp4" id="video-slider" class="active" loop autoplay muted></video>-->
+<!--    </div>-->
+
+  </section>
+  <!-- packages section starts  -->
+<!--  <section class="packages" id="packages">-->
+<!--    <h1 class="heading">-->
+<!--      <span>N</span>-->
+<!--      <span>E</span>-->
+<!--      <span>W</span>-->
+<!--      <span>S</span>-->
+
+<!--    </h1>-->
+<!--    <div class="box-container">-->
+
+<!--      <div class="box">-->
+<!--        <img src="#" alt="">-->
+<!--        <div class="content">-->
+<!--          <h3> <i class="fas fa-map-marker-alt"></i> AA </h3>-->
+
+<!--          <div id="nd1" class="divContent-Home">-->
+<!--          </div>-->
+<!--          &lt;!&ndash; <p>{{ $post->content }}</p> &ndash;&gt;-->
+<!--          <div class="stars">-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="far fa-star"></i>-->
+<!--          </div>-->
+<!--          <a href="#" class="btn">Xem Chi Tiết</a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="box">-->
+<!--        <img src="#" alt="">-->
+<!--        <div class="content">-->
+<!--          <h3> <i class="fas fa-map-marker-alt"></i> AAA </h3>-->
+<!--          &lt;!&ndash; <p>{{ $post['content'] }}</p> &ndash;&gt;-->
+<!--          <div class="stars">-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="fas fa-star"></i>-->
+<!--            <i class="far fa-star"></i>-->
+<!--          </div>-->
+<!--          <a href="#" class="btn">Xem Chi Tiết</a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+
+
+<!--    <div class="center" style="margin-left: 5%;" style="margin-top: 50%" style="justify-content: center;">-->
+<!--    </div>-->
+
+<!--  </section>-->
+  <!-- packages section ends -->
+  <!-- services section starts  -->
+  <section class="gallery" id="gallery">
+    <h1 class="heading">
+      <span>f</span>
+      <span>a</span>
+      <span>c</span>
+      <span>i</span>
+      <span>l</span>
+      <span>i</span>
+      <span></span>
+      <span>y</span>
+    </h1>
+    <div class="box-container" >
+
+      <div class="box" *ngFor="let facility of facilities ">
+        <img src="https://images4.content-hci.com/commimg/myhotcourses/blog/post/myhc_94121.jpg" alt="">
+        <h3> <i class="fas fa-map-marker-alt"></i> {{facility.facilityType}} </h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="content">
+          <h3>{{facility.facilityName}}</h3>
+          <p style="height: 100px; overflow-y: hidden ">{{facility.description}}</p>
+          <a href="#" class="btn">Xem Thêm</a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="services" id="services">
+    <h1 class="heading">
+      <span>s</span>
+      <span>e</span>
+      <span>r</span>
+      <span>v</span>
+      <span>i</span>
+      <span>c</span>
+      <span>e</span>
+      <span>s</span>
+    </h1>
+    <div class="box-container">
+      <div class="box">
+        <i class="fas fa-hotel"></i>
+        <h3>Khách Sạn</h3>
+        <p></p>
+      </div>
+      <div class="box">
+        <i class="fas fa-utensils"></i>
+        <h3>​Ăn Uống</h3>
+        <p></p>
+      </div>
+      <div class="box">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Giải Trí</h3>
+        <p></p>
+      </div>
+      <div class="box">
+        <i class="fas fa-globe-asia"></i>
+        <h3>Du Lịch Sinh Thái</h3>
+        <p></p>
+      </div>
+      <div class="box">
+        <i class="fas fa-plane"></i>
+        <h3>Phương Tiện</h3>
+        <p></p>
+      </div>
+      <div class="box">
+        <i class="fas fa-hiking"></i>
+        <h3>Tham Quan</h3>
+        <p></p>
+      </div>
+    </div>
+  </section>
+  <!-- services section ends -->
+  <!-- gallery section starts  -->
+
+  <!-- gallery section ends -->
+  <!-- review section starts  -->
+  <section class="review" id="review">
+    <h1 class="heading">
+      <span>r</span>
+      <span>e</span>
+      <span>v</span>
+      <span>i</span>
+      <span>e</span>
+      <span>w</span>
+    </h1>
+  </section>
+  <!-- review section ends -->
+  <!-- contact section starts  -->
+  <section class="contact" id="contact">
+    <h1 class="heading">
+      <span>C</span>
+      <span>o</span>
+      <span>n</span>
+      <span>t</span>
+      <span>a</span>
+      <span>c</span>
+      <span>t</span>
+    </h1>
+    <div class="row">
+      <div class="image">
+        <img src="#" alt="">
+      </div>
+      <form action="">
+        <div class="inputBox">
+          <input type="text" placeholder="name">
+          <input type="email" placeholder="email">
+        </div>
+        <div class="inputBox">
+          <input type="number" placeholder="number">
+          <input type="text" placeholder="subject">
+        </div>
+        <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+        <input type="submit" class="btn" value="send message">
+      </form>
+    </div>
+
+
+  </section>
+
+
+</article>
+
+

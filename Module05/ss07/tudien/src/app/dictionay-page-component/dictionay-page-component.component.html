@@ -1,0 +1,24 @@
+<p>dictionay-page-component works!</p>
+
+<a routerLink="create" class="btn btn-primary m-3">Create</a>
+
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+    <th>Word</th>
+    <th>Action</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let word of words">
+    <td>{{word.word}}</td>
+
+    <td>
+      <button class="btn btn-danger mx-3" >Delete</button>
+      <a class="btn btn-info" [routerLink]="['detail', word.word]"> translate  </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

@@ -296,6 +296,8 @@ section{
 
 .home .controls{
   padding:1rem;
+  width: 250px;
+  height: 80px;
   border-radius: 5rem;
   background:rgba(0,0,0,.7);
   position: relative;
@@ -312,9 +314,14 @@ section{
   margin:0 .5rem;
 }
 
-.home .controls .vid-btn.active{
+.home .controls .vid-btn .active{
   background:var(--orange);
-}
+  background: orange;}
+
+
+/*}.home .controls .vid-btn:hover{*/
+/*  background:var(--orange);*/
+/*}*/
 
 .book .row{
   display: flex;

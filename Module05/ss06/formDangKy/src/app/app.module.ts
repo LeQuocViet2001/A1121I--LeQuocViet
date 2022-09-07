@@ -7,12 +7,14 @@ import { DangkyComponent } from './dangky/dangky.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ReactiveFormsModule} from '@angular/forms';
 import { DangnhapComponent } from './dangnhap/dangnhap.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DangkyComponent,
-    DangnhapComponent
+    DangnhapComponent,
+    RegisterComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,85 @@
+<p>register works!</p>
+<h1  style="margin-left: 300px"> Dang ky </h1>
+
+<div    style="margin-left: 50px">
+
+  <form [formGroup]="registerForm" >
+        <div class="mb-3 col-6" >
+          <label  class="form-label">Email address</label>
+          <input type="email" class="form-control" formControlName="inputEmail1" aria-describedby="emailHelp">
+
+
+          <div class="alert alert-danger" role="alert"
+               *ngIf=" registerForm.get('inputEmail1')?.invalid && ( registerForm.get('inputEmail1')?.dirty || registerForm.get('inputEmail1')?.touched)">
+
+            <div *ngIf="registerForm.get('inputEmail1').errors.required">
+              inputEmail1 is not required.
+            </div>
+
+            <div *ngIf="registerForm.get('inputEmail1').errors.email">
+              inputEmail1 is not mail.
+            </div>
+          </div>
+        </div>
+
+
+    <div formGroupName="password">
+      <div class="mb-3 col-6" >
+        <label  class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="pass">
+      </div>
+
+      <div class="mb-3 col-6" >
+        <label  class="form-label">confirmpassword</label>
+        <input type="password" class="form-control" formControlName="confirmPass">
+
+        <div class="alert alert-danger" role ="alert"
+             *ngIf="registerForm.hasError('passwordNotMatch',['password']) && registerForm.get('password').touched">
+          Password does not match!
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+        <div class="mb-3 col-6" >
+          <label for="country" class="form-label">country</label>
+          <input type="text" class="form-control" id="country">
+        </div>
+
+        <div class="mb-3 col-6" >
+          <label for="age" class="form-label">age</label>
+          <input type="number" class="form-control" id="age">
+        </div>
+
+        <div class="mb-3 col-6" >
+          <label for="phone" class="form-label">phone</label>
+          <input type="text" class="form-control" id="phone" formControlName="phone">
+
+          <div class="alert alert-danger" role="alert"
+               *ngIf=" registerForm.get('phone')?.invalid && ( registerForm.get('phone')?.dirty || registerForm.get('phone')?.touched)">
+            sai so dien thoai
+          </div>
+          </div>
+
+
+        <div class="mb-3 col-6" >
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default radio
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+              Default checked radio
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
