@@ -1,0 +1,24 @@
+<p>todo works!</p>
+<h2 class="text-center">
+  Todo App
+</h2>
+<div class="col-md-8 offset-md-2">
+  <input  type="text" class="form-control" [formControl]="content" (change)="change()">
+  <ul    *ngFor="let todo of todoes" >
+    <li>
+       <span  [class.complete]="todo.complete"
+        (click)="toggleTodo(todo.id)" >
+      {{todo.content}}</span>
+
+      <span>
+          <button (click)="deleteTodo(todo.id)" class="bnt">Delete</button>
+          <button  [routerLink]="['/edit', todo.id]"  class="bnt">Edit</button>
+
+      </span>
+
+    </li>
+
+
+
+  </ul>
+</div>

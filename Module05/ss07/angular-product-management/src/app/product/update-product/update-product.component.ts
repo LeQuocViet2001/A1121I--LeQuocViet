@@ -24,7 +24,12 @@ export class UpdateProductComponent implements OnInit {
 
     this.activatedRoute.paramMap.subscribe((param)=>{
           const id = parseInt( param.get('id') );
-          this.product = this.productService.findById(id);
+
+          this.productService.findById(id).subscribe(
+            (data)=>{  this.product = data},
+            ()=>{},
+            ()=>{ },
+            );
           console.log( this.product)
 
     });
@@ -39,13 +44,18 @@ export class UpdateProductComponent implements OnInit {
 
 
 
-
-
   submit() {
     const product = this.productUpdateForm.value;
-    this.productService.updateProduct(product);
+
+    this.productService.updateProduct(product).subscribe(
+      ()=>{},
+      ()=>{},
+      ()=>{
+        this.router.navigateByUrl("/product/list");
+      },
+    );
     // this.productUpdateForm.reset();
-    this.router.navigateByUrl("/product/list");
+
   }
 
 

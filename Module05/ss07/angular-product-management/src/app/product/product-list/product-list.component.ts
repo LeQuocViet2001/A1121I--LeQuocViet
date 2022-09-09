@@ -1,6 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, TemplateRef} from '@angular/core';
 import {Product} from '../../model/product';
 import {ProductService} from '../../service/product.service';
+import {Observable} from 'rxjs';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @Component({
@@ -13,31 +16,34 @@ export class ProductListComponent implements OnInit {
   products: Product[] = [];
 
   @Input() productsDetele: Product;
+  private modalService: NgbModal;
 
-  constructor( private  productService: ProductService
+
+
+  constructor( private  productService: ProductService,
+
               ) {
 
   }
 
   ngOnInit(): void {
     this.getAll();
-
-
-
   }
 
-
-  getAll() {
-    this.products = this.productService.getAll();
-  }
-
-  showDataModelDelete(id: number, name: string) {
-    console.log(id+","+name);
-    this.productsDetele.id = id;
-    this.productsDetele.name = name;
+  getAll()  {
+    this.productService.getAll().subscribe(
+      (data)=>{ this.products = data});
   }
 
 
 
+  deleteId : number ;
 
+  openDelete(  targetModal , product: Product) {
+    this.deleteId = product.id;
+    this.modalService.open(targetModal, {
+      backdrop: 'static',
+      size: 'lg'
+    });
+  }
 }

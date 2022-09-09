@@ -1,62 +1,39 @@
 import { Injectable } from '@angular/core';
 import {Product} from "../model/product";
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor() { }
+  constructor( private  httpClient: HttpClient,
+                private router: Router ) { }
+
+    API_URL = "http://localhost:3000/product";
 
 
-  products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  }, {
-    id: 2,
-    name: 'IPhone 11',
-    price: 1560000,
-    description: 'Like new'
-  }, {
-    id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
-  }];
-
-
-  getAll() {
-    return this.products;
+  getAll() : Observable<Product[]>   {
+    return this.httpClient.get<Product[]>( this.API_URL);
   }
 
-  saveProduct(product) {
-    this.products.push(product);
+  saveProduct(product : Product) : Observable<void> {
+    return this.httpClient.post<void>( this.API_URL, product);
   }
 
-  updateProduct( Updateproduct: Product) {
+  updateProduct( product: Product) : Observable<void> {
 
-    let product = this.products.find( (product: Product) => product.id == Updateproduct.id);
-
-    let index = this.products.indexOf(product);
-
-
-    this.products[index] = Updateproduct;
+    return this.httpClient.put<void>( this.API_URL + '/' + product.id, product);
   }
 
-  findById( id: number){
 
-    return this.products.find( (product: Product)=> product.id ==id);
+  findById( id: number) :Observable<Product>{
+    return this.httpClient.get<Product>( this.API_URL +"/" + id);
+  }
+
+  delete( id: number) : Observable<void>{
+    return this.httpClient.delete<void>( this.API_URL +"/" + id);
   }
 }

@@ -8,6 +8,10 @@ import { ProductCreateComponent } from './product/product-create/product-create.
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { UpdateProductComponent } from './product/update-product/update-product.component';
+import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NgbModal, NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -16,16 +20,25 @@ import { UpdateProductComponent } from './product/update-product/update-product.
     ProductListComponent,
     ProductCreateComponent,
     UpdateProductComponent,
+
+
+
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        RouterModule
+        RouterModule,
+        HttpClientModule,
+        BrowserAnimationsModule
 
 
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+
+  ],
+  bootstrap: [AppComponent],
+  providers: []
+
 })
 export class AppModule { }
